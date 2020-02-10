@@ -1,0 +1,168 @@
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: auto;
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: auto;
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-style: bold;
+  font-weight: 400;
+}
+.container .header-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../images/main1block.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  padding: 25px 0 160px 0;
+}
+.container .header-wrapper:after {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
+  opacity: 0.9;
+}
+.container .header-wrapper header.header {
+  display: flex;
+  width: 1600px;
+  justify-content: center;
+}
+.container .header-wrapper header.header .header__logo {
+  margin-right: auto;
+}
+.container .header-wrapper header.header .header__link {
+  display: flex;
+}
+.container .header-wrapper header.header .header__link a {
+  margin-right: 32px;
+}
+.container .header-wrapper header.header .header__link a.facebook-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.container .header-wrapper header.header .header__link a.youtube-link svg {
+  width: 26px;
+  height: 20px;
+  fill: white;
+}
+.container .header-wrapper header.header .header__link a.instagram-link svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.container .header-wrapper header.header .header__btn a {
+  margin: 0 30px;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 7px;
+  border: 1px solid #fb9a50;
+}
+.container .header-wrapper header.header .header__lang button {
+  margin-left: 30px;
+  cursor: pointer;
+}
+.container .header-wrapper header.header .header__lang button svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.container .header-wrapper .header-content {
+  width: 1200px;
+}
+.container .header-wrapper .header-content .header-content__title {
+  margin-bottom: 65px;
+}
+.container .header-wrapper .header-content .header-content__title h1 {
+  color: white;
+}
+.container .header-wrapper .header-content .header-content__title h1 span {
+  color: #fb9a50;
+}
+.container .header-wrapper .header-content .header-content__subtitle {
+  margin-bottom: 60px;
+}
+.container .header-wrapper .header-content .header-content__subtitle p {
+  color: white;
+}
+.container .header-wrapper .header-content .header-content__link-store .link-app-store {
+  height: fit-content;
+  margin-right: 30px;
+}
+.container .header-wrapper .header-content .header-content__link-store .link-app-store svg {
+  width: 112px;
+  height: 37px;
+}
+.container .header-wrapper .header-content .header-content__link-store .link-play-market {
+  height: fit-content;
+}
+.container .header-wrapper .header-content .header-content__link-store .link-play-market svg {
+  width: 125px;
+  height: 37px;
+}
+.container .why-me-wrapper {
+  width: auto;
+  height: 787px;
+  box-shadow: 2px 5px 23px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 436px;
+  background-color: #ffffff;
+  z-index: 2;
+  position: relative;
+}
+.container .why-me-wrapper .content {
+  display: flex;
+}
+.container .why-me-wrapper .content__list .advantages h3 {
+  color: #fb9a50;
+}
+.container .investments-wrapper {
+  background-image: url("../images/3block.png");
+  width: auto;
+  height: 1500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-500px);
+  padding-top: 500px;
+}
+.container .investments-wrapper:after {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
+  opacity: 0.9;
+}
+
+/*# sourceMappingURL=main.css.map */

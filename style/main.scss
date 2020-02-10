@@ -1,0 +1,197 @@
+@import "reset";
+@import "font";
+.container {
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/main1block.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    padding: 25px 0 160px 0 ;
+    &:after{
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: -1;
+      position: absolute;
+      background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
+      opacity: 0.9;
+    }
+    header.header {
+      display: flex;
+      width: 1600px;
+      justify-content: center;
+      .header__logo {
+        margin-right: auto;
+        a {
+          img {}
+        }
+      }
+      .header__link {
+        display: flex;
+        a {
+          margin-right: 32px ;
+        }
+        a.facebook-link {
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: white;
+        }
+        }
+        a.youtube-link {
+          svg {
+            width: 26px;
+            height: 20px;
+            fill: white;
+          }
+        }
+        a.instagram-link {
+          svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+          }
+        }
+      }
+      .header__btn {
+        a {
+          margin: 0 30px ;
+          color: white;
+          padding: 4px 15px;
+          border-radius: 7px;
+          border: 1px solid #fb9a50;
+        }
+      }
+      .header__lang {
+        button {
+          margin-left: 30px;
+          cursor: pointer;
+         svg {
+           width: 20px;
+           height: 20px;
+           fill: white;
+         }
+        }
+      }
+    }
+    .header-content {
+      width: 1200px;
+      .header-content__title {
+        margin-bottom: 65px;
+        h1 {
+          color: white;
+          span{
+            color: #fb9a50;
+          }
+        }
+      }
+      .header-content__subtitle {
+        margin-bottom: 60px;
+        p {
+          color: white;
+        }
+      }
+      .header-content__link-store {
+        .link-app-store {
+          height:fit-content;
+          margin-right: 30px;
+
+          svg{
+            width: 112px;
+            height: 37px;
+          }
+        }
+        .link-play-market {
+          height: fit-content;
+          svg {
+            width: 125px;
+            height: 37px;
+          }
+        }
+      }
+    }
+
+  }
+  .why-me-wrapper {
+    width: auto;
+    height: 787px;
+    box-shadow: 2px 5px 23px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 436px;
+    background-color: #ffffff;
+    z-index: 2;
+    position: relative;
+    h2{
+
+    }
+    .content{
+      display: flex;
+      &__img {
+
+      }
+      &__list{
+        .advantages{
+          h3{
+            color: #fb9a50;
+          }
+          p{
+
+          }
+        }
+      }
+    }
+  }
+  .investments-wrapper {
+    background-image: url("../images/3block.png");
+    width: auto;
+    height: 1500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateY(-500px);
+    padding-top: 500px;
+    &:after{
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: -1;
+      position: absolute;
+      background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
+      opacity: 0.9;
+    }
+    h2 {}
+    .investments-wrapper-content {
+      .column {
+        .invest-advantages {
+          h3 {}
+          p {}
+        }
+        .invest-advantages {
+          h3 {}
+          p {}
+        }
+      }
+      .column {
+        .invest-advantages {
+          h3 {}
+          p {}
+        }
+        .invest-advantages {
+          h3 {}
+          p {}
+        }
+      }
+    }
+    .investments-wrapper__btn {
+      button {}
+    }
+  }
+
+
+}
