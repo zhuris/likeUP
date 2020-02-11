@@ -56,48 +56,48 @@ button {
   background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
   opacity: 0.9;
 }
-.header-wrapper header.header {
+.header-wrapper .header {
   display: flex;
   width: 100%;
   padding: 0 150px;
   justify-content: center;
 }
-.header-wrapper header.header .header__logo {
+.header-wrapper .header .header__logo {
   margin-right: auto;
 }
-.header-wrapper header.header .header__link {
+.header-wrapper .header .header__link {
   display: flex;
 }
-.header-wrapper header.header .header__link a {
+.header-wrapper .header .header__link a {
   margin-right: 32px;
 }
-.header-wrapper header.header .header__link a.facebook-link svg {
+.header-wrapper .header .header__link a.facebook-link svg {
   width: 20px;
   height: 20px;
   fill: white;
 }
-.header-wrapper header.header .header__link a.youtube-link svg {
+.header-wrapper .header .header__link a.youtube-link svg {
   width: 26px;
   height: 20px;
   fill: white;
 }
-.header-wrapper header.header .header__link a.instagram-link svg {
+.header-wrapper .header .header__link a.instagram-link svg {
   width: 20px;
   height: 20px;
   fill: white;
 }
-.header-wrapper header.header .header__btn a {
+.header-wrapper .header .header__btn a {
   margin: 0 30px;
   color: white;
   padding: 4px 15px;
   border-radius: 7px;
   border: 1px solid #fb9a50;
 }
-.header-wrapper header.header .header__lang button {
+.header-wrapper .header .header__lang button {
   margin-left: 30px;
   cursor: pointer;
 }
-.header-wrapper header.header .header__lang button svg {
+.header-wrapper .header .header__lang button svg {
   width: 20px;
   height: 20px;
   fill: white;
@@ -134,7 +134,7 @@ button {
 }
 
 .why-me-wrapper {
-  padding: 65px 0 0 0;
+  padding: 65px 0 125px 0;
   width: auto;
   height: 787px;
   box-shadow: 2px 5px 23px 1px rgba(0, 0, 0, 0.25);
@@ -221,10 +221,12 @@ button {
   width: auto;
   height: auto;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
   box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
   border-radius: 435px 0 1px;
   background-color: #ffffff;
-  transform: translateY(-905px);
+  margin-top: -905px;
   padding-top: 60px;
 }
 .my-way-wrapper h2 {
@@ -251,14 +253,14 @@ button {
     stroke-dashoffset: 0;
   }
 }
-.my-way-wrapper .my-way .my-way__container {
+.my-way-wrapper .my-way__container {
   position: absolute;
   width: 100%;
   height: 100%;
   background: #dadada;
   opacity: 0.5;
 }
-.my-way-wrapper .my-way .my-way__container .point-mvp {
+.my-way-wrapper .my-way__container .point-mvp {
   display: flex;
   flex-direction: column;
   max-width: 100px;
@@ -267,7 +269,7 @@ button {
   left: 1000px;
   top: -14px;
 }
-.my-way-wrapper .my-way .my-way__container .point-mvp .point-mvp__circle {
+.my-way-wrapper .my-way__container .point-mvp .point-mvp__circle {
   display: flex;
   border-radius: 50%;
   height: 65px;
@@ -276,8 +278,56 @@ button {
   align-items: center;
   justify-content: center;
 }
-.my-way-wrapper .my-way .my-way__container .point-mvp p.point-mvp__subtitle {
+.my-way-wrapper .my-way__container .point-mvp p.point-mvp__subtitle {
   text-align: center;
+}
+
+.partners-wrapper {
+  background-image: url("../images/7block.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  z-index: -1;
+}
+.partners-wrapper:after {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
+  opacity: 0.9;
+}
+.partners-wrapper h2 {
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.partners-wrapper .content .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partners-wrapper .content .partner {
+  height: 160px;
+  display: flex;
+  align-items: center;
+}
+.partners-wrapper .content .partner__image {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 150px;
+  border-radius: 7px;
+  opacity: 0.4;
+  background-color: #ffffff;
+}
+.partners-wrapper .content .partner__image img {
+  height: 100%;
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
