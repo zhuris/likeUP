@@ -1,6 +1,10 @@
 @import "reset";
 @import "font";
 .container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
   .header-wrapper {
     display: flex;
     flex-direction: column;
@@ -24,7 +28,8 @@
     }
     header.header {
       display: flex;
-      width: 1600px;
+      width: 100%;
+      padding: 0 150px;
       justify-content: center;
       .header__logo {
         margin-right: auto;
@@ -81,7 +86,6 @@
       }
     }
     .header-content {
-      width: 1200px;
       .header-content__title {
         margin-bottom: 65px;
         h1 {
@@ -119,6 +123,7 @@
 
   }
   .why-me-wrapper {
+    padding: 65px 0 0 0 ;
     width: auto;
     height: 787px;
     box-shadow: 2px 5px 23px 1px rgba(0, 0, 0, 0.25);
@@ -127,20 +132,23 @@
     z-index: 2;
     position: relative;
     h2{
-
+      color: #11306d;
+      text-transform: uppercase;
+      margin-bottom: 25px;
     }
     .content{
       display: flex;
       &__img {
-
+        margin-right: 295px;
       }
       &__list{
         .advantages{
           h3{
             color: #fb9a50;
+            margin-bottom: 25px;
           }
           p{
-
+            margin-bottom: 45px ;
           }
         }
       }
@@ -149,7 +157,7 @@
   .investments-wrapper {
     background-image: url("../images/3block.png");
     width: auto;
-    height: 1500px;
+    height: 1580px;
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateY(-500px);
@@ -165,33 +173,116 @@
       background-image: linear-gradient(to right, rgba(48, 87, 165, 0.88) 0%, rgba(48, 87, 165, 0.88) 19%, rgba(17, 48, 109, 0.88) 79%, rgba(17, 48, 109, 0.88) 89%);
       opacity: 0.9;
     }
-    h2 {}
+    h2 {
+      color: #ffffff;
+      font-size: 30px;
+      margin: 65px 0 70px 0  ;
+    }
     .investments-wrapper-content {
-      .column {
+      .row {
+          display: flex;
+        justify-content: space-between;
         .invest-advantages {
-          h3 {}
-          p {}
-        }
-        .invest-advantages {
-          h3 {}
-          p {}
-        }
-      }
-      .column {
-        .invest-advantages {
-          h3 {}
-          p {}
-        }
-        .invest-advantages {
-          h3 {}
-          p {}
+          margin-bottom: 60px;
+          max-width: 468px;
+
+          h3 {
+            color: #fb9a50;
+            font-size: 16px;
+            text-transform: uppercase;
+          }
+          p {
+            margin-top: 25px;
+            font-size: 16px;
+            color: white;
+          }
         }
       }
     }
     .investments-wrapper__btn {
-      button {}
+      display: flex;
+      justify-content: center;
+      button {
+        border-radius: 7px;
+        background-color: #fb9a50;
+        color: white;
+        padding: 15px 30px;
+        text-transform: uppercase;
+
+      }
     }
   }
 
+.my-way-wrapper {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 435px 0 1px;
+  background-color: #ffffff;
+  transform: translateY(-905px);
+  padding-top: 60px;
+    h2 {
+      color: #11306d;
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      margin-bottom: 130px;
 
+    }
+  .my-way {
+    width: 80%;
+
+    svg {
+      .cls-11 {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 500;
+        animation: dash2 1.5s linear alternate infinite;
+        animation-fill-mode: both;
+      }
+
+      @keyframes dash2 {
+        from {
+          stroke-dashoffset: 500;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+    .my-way__container {
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+      background: #dadada;
+      opacity: 0.5;
+      .point-mvp {
+        display: flex;
+        flex-direction: column;
+        max-width: 100px;
+        align-items: center;
+        position: absolute;
+        left: 1000px;
+        top: -14px;
+        span {}
+        .point-mvp__circle {
+          display: flex;
+          border-radius: 50%;
+          height: 65px;
+          width: 65px;
+          background: red;
+          align-items: center;
+          justify-content: center;
+        }
+        p.point-mvp__subtitle {
+          text-align: center;
+        }
+      }
+    }
+
+  }
 }
+
+
