@@ -8,8 +8,13 @@ a {
   box-sizing: border-box;
   font-family: "Montserrat";
 }
-button {
+button,
+input {
   background: none;
-  border:none;
+  border: none;
+  outline: none;
   cursor: pointer;
+}
+li {
+  list-style: none;
 }
