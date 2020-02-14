@@ -44,6 +44,9 @@ li {
 .wrapper .menu .menu-items__item {
   text-transform: uppercase;
 }
+.wrapper .active {
+  color: #fb9a50;
+}
 .wrapper .container {
   max-width: 1240px;
   margin: 0 auto;
@@ -351,6 +354,11 @@ li {
 }
 .wrapper .my-way-wrapper .my-way__container .point-mvp p.point-mvp__subtitle {
   text-align: center;
+}
+.wrapper .my-team-wrapper {
+  width: auto;
+  height: 1082px;
+  background: #11306d;
 }
 .wrapper .my-creators-wrapper {
   width: auto;

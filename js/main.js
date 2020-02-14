@@ -30,31 +30,45 @@ $(document).ready(function(){
 
     //menu
 
-    // let header = $('.header-wrapper').offset().top;
-    // $(window).on("scroll", function() {
-    //     console.log(header);
-    //     if ($(window).scrollTop() > header) $('.menu-items__item').addClass('active');
-    //     else $('.menu-items__item').removeClass('active');
-    // });
+    $(document).ready(function () {
+        $(document).on("scroll", onScroll);
 
-    $(window).on("scroll", function() {
+        //smoothscroll
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            $(document).off("scroll");
 
-        let win = $(window).scrollTop();
-        console.log(win)
+            $('a').each(function () {
+                $(this).removeClass('active');
+            })
+            $(this).addClass('active');
 
-       $('.section').each(function () {
-            let top = $(this).offset().top;
-            let id = $(this).attr('id');
-            // console.log(id);
-            // console.log(top);
-           if (win > top) {
-
-               $('.section').removeClass('active');
-               $(this).addClass('active');
-           }
-       })
-
+            var target = this.hash,
+                menu = target;
+            $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top+2
+            }, 500, 'swing', function () {
+                window.location.hash = target;
+                $(document).on("scroll", onScroll);
+            });
+        });
     });
+
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('#menu a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('#menu ul li a').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
 
 
 
