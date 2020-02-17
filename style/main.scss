@@ -1,20 +1,55 @@
 @import "reset";
 @import "font";
+body {
+  position: relative;
+}
 .wrapper {
-  .menu {
+  .menu_white{
+    color: white;
+  }
+  .list-group-item.list-group-item-action.menu_black{
+    color: #11306d;
+  }
+  .list-group {
     position: fixed;
     top: 100px;
-    right: 0;
-    z-index: 12;
-    .menu-items{
-      &__item{
-        text-transform: uppercase;
+    right: 80px;
+    text-align: end;
+    overflow: hidden;
+    z-index: 999;
+    .list-group-item{
+      color: white;
+      background: none;
+      border: none;
+      padding: .45rem;
+      position: relative;
+      right: -45px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      text-transform: uppercase;
+      &:after{
+        content: "";
+        width: 34px;
+        height: 1px;
+        margin-left: 10px;
+        display: inline-block;
+        background-color: #fb9a50;
+
       }
     }
+    .list-group-item-action{
+
+    }
+    .list-group-item.list-group-item-action.active {
+        color: #fb9a50;
+        background: none;
+      transition: .5s ease;
+      right: 0;
+
+      }
   }
-  .active {
-    color: #fb9a50;
-  }
+
   .container {
     max-width: 1240px;
     margin: 0 auto;
@@ -103,6 +138,10 @@
           padding: 4px 15px;
           border-radius: 7px;
           border: 1px solid #fb9a50;
+          &:hover{
+            transition: .3s ease;
+            background:  #fb9a50;
+          }
         }
       }
 
@@ -182,20 +221,26 @@
 
     .content {
       display: flex;
+      justify-content: space-between;
 
       &__img {
-        margin-right: 295px;
       }
 
       &__list {
+        width: 55%;
         .advantages {
           h3 {
             color: #fb9a50;
             margin-bottom: 25px;
+            font-size: 16px;
           }
 
           p {
             margin-bottom: 45px;
+            color: #11306d;
+            font-size: 16px;
+            line-height: 19px;
+
           }
         }
       }
@@ -312,7 +357,7 @@
 
         .invest-advantages {
           margin-bottom: 60px;
-          max-width: 468px;
+          max-width: 500px;
 
           h3 {
             color: #fb9a50;
@@ -352,7 +397,7 @@
     box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
     border-radius: 435px 0 1px;
     background-color: #ffffff;
-    margin-top: -905px;
+    margin-top: -830px;
     padding-top: 60px;
 
     h2 {
@@ -367,31 +412,15 @@
       width: 80%;
 
       svg {
-        .cls-11 {
-          stroke-dasharray: 500;
-          stroke-dashoffset: 500;
-          animation: dash2 1.5s linear alternate infinite;
-          animation-fill-mode: both;
-        }
-
-        @keyframes dash2 {
-          from {
-            stroke-dashoffset: 500;
-          }
-          to {
-            stroke-dashoffset: 0;
-          }
-        }
+        margin-bottom: -45px;
       }
     }
 
     .my-way__container {
       position: absolute;
-
+      display: flex;
       width: 100%;
       height: 100%;
-      background: #dadada;
-      opacity: 0.5;
 
       .point-mvp {
         display: flex;
@@ -408,16 +437,40 @@
         .point-mvp__circle {
           display: flex;
           border-radius: 50%;
-          height: 65px;
-          width: 65px;
-          background: red;
+          height: 50px;
+          width: 50px;
           align-items: center;
           justify-content: center;
+          border-radius: 50%;
+          box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
+          border: 2px solid #fb9a50;
+          background-color: #ffffff;
         }
 
         p.point-mvp__subtitle {
           text-align: center;
+          color: #11306d;
+          font-size: 14px;
         }
+      }
+      .q1{
+        top: 1.4rem;
+        left: 40%;
+      }
+      .q2{
+        top: 1.4rem;
+        left: 60%;
+      }
+      .q3{
+        top: 12.6rem;
+        left: 40%;
+      }
+      .q4{
+        top: 12.6rem;
+        left: 60%;
+        }
+      .active{
+        animation: wave 1s ease infinite;
       }
     }
   }
@@ -527,6 +580,7 @@
               }
 
               p {
+                margin: 0;
               }
             }
 
@@ -535,6 +589,7 @@
 
               p {
                 text-transform: uppercase;
+
               }
             }
           }
@@ -791,4 +846,31 @@
       }
     }
   }
+}
+// anim road
+#my {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3400;
+  animation: draw 10s linear reverse infinite;
+  fill: none;
+  stroke: #11306d;
+  /* stroke-miterlimit:10;  */
+  stroke-width:4px;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes wave {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
 }

@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+
+    $('main').scrollspy({ target: '#menu' });
+
+
     //slider
 
     $('.main-slider').slick({
@@ -29,47 +33,27 @@ $(document).ready(function(){
     });
 
     //menu
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            $('.list-group-item').removeClass('menu_black');
+            $('.list-group-item').addClass('menu_white');
+            $('.white-div').each(function(){
+                var light_pos = $(this).offset().top;
+                var light_height = $(this).height();
 
-    $(document).ready(function () {
-        $(document).on("scroll", onScroll);
+                $('.list-group-item').each(function(index , element){
+                    var menu_pos = $(element).offset().top;
+                    var menu_height = $(element).height();
 
-        //smoothscroll
-        $('a[href^="#"]').on('click', function (e) {
-            e.preventDefault();
-            $(document).off("scroll");
-
-            $('a').each(function () {
-                $(this).removeClass('active');
+                    if(menu_pos > light_pos && menu_pos < (light_pos + light_height)) {
+                        $(element).addClass('menu_black');
+                        $(element).removeClass('menu_white');
+                    }
+                })
             })
-            $(this).addClass('active');
-
-            var target = this.hash,
-                menu = target;
-            $target = $(target);
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top+2
-            }, 500, 'swing', function () {
-                window.location.hash = target;
-                $(document).on("scroll", onScroll);
-            });
-        });
-    });
-
-    function onScroll(event){
-        var scrollPos = $(document).scrollTop();
-        $('#menu a').each(function () {
-            var currLink = $(this);
-            var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('#menu ul li a').removeClass("active");
-                currLink.addClass("active");
-            }
-            else{
-                currLink.removeClass("active");
-            }
-        });
-    }
-
+        })
+    })
 
 
 });
