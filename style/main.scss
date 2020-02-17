@@ -1,15 +1,19 @@
 @import "reset";
 @import "font";
+
 body {
   position: relative;
 }
+
 .wrapper {
-  .menu_white{
+  .menu_white {
     color: white;
   }
-  .list-group-item.list-group-item-action.menu_black{
+
+  .list-group-item.list-group-item-action.menu_black {
     color: #11306d;
   }
+
   .list-group {
     position: fixed;
     top: 100px;
@@ -17,7 +21,9 @@ body {
     text-align: end;
     overflow: hidden;
     z-index: 999;
-    .list-group-item{
+    font-size: 12px;
+
+    .list-group-item {
       color: white;
       background: none;
       border: none;
@@ -28,7 +34,8 @@ body {
       justify-content: flex-end;
       align-items: center;
       text-transform: uppercase;
-      &:after{
+
+      &:after {
         content: "";
         width: 34px;
         height: 1px;
@@ -38,16 +45,18 @@ body {
 
       }
     }
-    .list-group-item-action{
+
+    .list-group-item-action {
 
     }
+
     .list-group-item.list-group-item-action.active {
-        color: #fb9a50;
-        background: none;
+      color: #fb9a50;
+      background: none;
       transition: .5s ease;
       right: 0;
 
-      }
+    }
   }
 
   .container {
@@ -138,9 +147,10 @@ body {
           padding: 4px 15px;
           border-radius: 7px;
           border: 1px solid #fb9a50;
-          &:hover{
+
+          &:hover {
             transition: .3s ease;
-            background:  #fb9a50;
+            background: #fb9a50;
           }
         }
       }
@@ -228,6 +238,7 @@ body {
 
       &__list {
         width: 55%;
+
         .advantages {
           h3 {
             color: #fb9a50;
@@ -443,7 +454,7 @@ body {
           justify-content: center;
           border-radius: 50%;
           box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
-          border: 2px solid #fb9a50;
+          color: #fb9a50;
           background-color: #ffffff;
         }
 
@@ -453,29 +464,67 @@ body {
           font-size: 14px;
         }
       }
-      .q1{
+
+      .q1 {
         top: 1.4rem;
         left: 40%;
-      }
-      .q2{
-        top: 1.4rem;
-        left: 60%;
-      }
-      .q3{
-        top: 12.6rem;
-        left: 40%;
-      }
-      .q4{
-        top: 12.6rem;
-        left: 60%;
+
+        //&:before {
+        //  content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
+        //  display: none;
+        //  max-width: 300px;
+        //  top: 0;
+        //  left: 50%;
+        //  position: absolute;
+        //
+        //}
+
+        &:hover .point-mvp__circle{
+          border: 2px solid #fb9a50;
         }
-      .active{
+        &:hover :before{
+          display: flex;
+        }
+      }
+
+      .q2 {
+        top: 1.4rem;
+        left: 60%;
+
+        &:hover .point-mvp__circle {
+
+          border: 2px solid #fb9a50;
+        }
+      }
+
+      .q3 {
+        top: 12.6rem;
+        left: 40%;
+
+        &:hover .point-mvp__circle {
+
+          border: 2px solid #fb9a50;
+        }
+      }
+
+      .q4 {
+        top: 12.6rem;
+        left: 60%;
+
+        &:hover .point-mvp__circle {
+
+          border: 2px solid #fb9a50;
+        }
+      }
+
+      .active {
+        border: 2px solid #fb9a50;
         animation: wave 1s ease infinite;
       }
     }
   }
 
-  .my-team-wrapper{
+  .my-team-wrapper {
     width: auto;
     height: 1082px;
     background: #11306d;
@@ -847,6 +896,7 @@ body {
     }
   }
 }
+
 // anim road
 #my {
   stroke-dasharray: 3000;
@@ -855,22 +905,24 @@ body {
   fill: none;
   stroke: #11306d;
   /* stroke-miterlimit:10;  */
-  stroke-width:4px;
+  stroke-width: 4px;
 }
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes wave {
-  0%{
+  0% {
     transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(1.1);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
-  
+
 }

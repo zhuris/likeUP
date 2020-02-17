@@ -55,6 +55,7 @@ body {
   text-align: end;
   overflow: hidden;
   z-index: 999;
+  font-size: 12px;
 }
 .wrapper .list-group .list-group-item {
   color: white;
@@ -384,7 +385,7 @@ body {
   justify-content: center;
   border-radius: 50%;
   box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
-  border: 2px solid #fb9a50;
+  color: #fb9a50;
   background-color: #ffffff;
 }
 .wrapper .my-way-wrapper .my-way__container .point-mvp p.point-mvp__subtitle {
@@ -396,19 +397,35 @@ body {
   top: 1.4rem;
   left: 40%;
 }
+.wrapper .my-way-wrapper .my-way__container .q1:hover .point-mvp__circle {
+  border: 2px solid #fb9a50;
+}
+.wrapper .my-way-wrapper .my-way__container .q1:hover :before {
+  display: flex;
+}
 .wrapper .my-way-wrapper .my-way__container .q2 {
   top: 1.4rem;
   left: 60%;
+}
+.wrapper .my-way-wrapper .my-way__container .q2:hover .point-mvp__circle {
+  border: 2px solid #fb9a50;
 }
 .wrapper .my-way-wrapper .my-way__container .q3 {
   top: 12.6rem;
   left: 40%;
 }
+.wrapper .my-way-wrapper .my-way__container .q3:hover .point-mvp__circle {
+  border: 2px solid #fb9a50;
+}
 .wrapper .my-way-wrapper .my-way__container .q4 {
   top: 12.6rem;
   left: 60%;
 }
+.wrapper .my-way-wrapper .my-way__container .q4:hover .point-mvp__circle {
+  border: 2px solid #fb9a50;
+}
 .wrapper .my-way-wrapper .my-way__container .active {
+  border: 2px solid #fb9a50;
   animation: wave 1s ease infinite;
 }
 .wrapper .my-team-wrapper {
