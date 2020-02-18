@@ -44,6 +44,7 @@ body {
         background-color: #fb9a50;
 
       }
+
     }
 
     .list-group-item-action {
@@ -61,7 +62,6 @@ body {
 
   .container {
     max-width: 1240px;
-    margin: 0 auto;
   }
 
   .header-wrapper {
@@ -438,11 +438,12 @@ body {
         flex-direction: column;
         max-width: 100px;
         align-items: center;
-        position: absolute;
+        position: relative;
         left: 1000px;
         top: -14px;
 
         span {
+          color: #11306d;
         }
 
         .point-mvp__circle {
@@ -468,52 +469,106 @@ body {
       .q1 {
         top: 1.4rem;
         left: 40%;
+        transition: .3s ease;
 
-        //&:before {
-        //  content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
-        //  display: none;
-        //  max-width: 300px;
-        //  top: 0;
-        //  left: 50%;
-        //  position: absolute;
-        //
-        //}
+        &:before {
+          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
+          display: none;
+          width: 300px;
+         bottom: 43rem;
+          position: absolute;
+          font-size: 14px;
+          color: #fb9a50;
+          letter-spacing: 0.35px;
+         text-align: center;
+        }
 
         &:hover .point-mvp__circle{
           border: 2px solid #fb9a50;
+          transition: .3s ease;
         }
-        &:hover :before{
-          display: flex;
+        &:hover.q1:before {
+            display: flex;
+          transition: .5s ease;
+
         }
       }
 
       .q2 {
         top: 1.4rem;
-        left: 60%;
+        left: 54.8%;
+        &:before {
+          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
+          display: none;
+          width: 300px;
+          bottom: 43rem;
+          position: absolute;
+          font-size: 14px;
+          color: #fb9a50;
+          letter-spacing: 0.35px;
+          text-align: center;
+        }
 
         &:hover .point-mvp__circle {
-
+          transition: .3s ease;
           border: 2px solid #fb9a50;
+        }
+        &:hover.q2:before {
+          display: flex;
+          transition: .5s ease;
+
         }
       }
 
       .q3 {
         top: 12.6rem;
-        left: 40%;
+        left: 29.8%;
+        &:before {
+          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
+          display: none;
+          width: 300px;
+          bottom: 29rem;
+          position: absolute;
+          font-size: 14px;
+          color: #fb9a50;
+          letter-spacing: 0.35px;
+          text-align: center;
+        }
 
         &:hover .point-mvp__circle {
-
+          transition: .3s ease;
           border: 2px solid #fb9a50;
+        }
+        &:hover.q3:before {
+          display: flex;
+          transition: .5s ease;
+
         }
       }
 
       .q4 {
         top: 12.6rem;
-        left: 60%;
+        left: 44.5%;
+        &:before {
+          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
+          display: none;
+          width: 300px;
+          bottom: 29rem;
+          position: absolute;
+          font-size: 14px;
+          color: #fb9a50;
+          letter-spacing: 0.35px;
+          text-align: center;
+        }
 
         &:hover .point-mvp__circle {
-
+          transition: .3s ease;
           border: 2px solid #fb9a50;
+        }
+        &:hover.q4:before {
+          display: flex;
+          transition: .5s ease;
+
         }
       }
 
@@ -526,8 +581,251 @@ body {
 
   .my-team-wrapper {
     width: auto;
-    height: 1082px;
     background: #11306d;
+    background-image: url("../images/5block.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -21rem ;
+    position: relative;
+    &:after {
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 0;
+      position: absolute;
+      background-image: linear-gradient(
+                      to right,
+                      rgba(48, 87, 165, 0.88) 0%,
+                      rgba(48, 87, 165, 0.88) 19%,
+                      rgba(17, 48, 109, 0.88) 79%,
+                      rgba(17, 48, 109, 0.88) 89%
+      );
+      opacity: 0.9;
+    }
+    .my-team__container {
+      padding: 65px 0;
+      z-index: 11;
+      position: relative;
+      .my-team__content {
+        h2 {
+          color: #ffffff;
+          font-size: 30px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.75px;
+          margin-bottom: 120px;
+        }
+        p {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+        }
+      }
+      .my-team__image {
+        display: flex;
+        justify-content: flex-end;
+        .my-team__image-circle-1 {
+          width: 452px;
+          height: 452px;
+          border: 1px solid #9982f8;
+          border-radius: 50%;
+          background-color: #04437b;
+          background-image: radial-gradient(circle 525px at 27% 75%, rgba(4, 67, 123, 0.6) 0%, rgba(153, 130, 248, 0.6) 100%);
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .my-team__image-circle-2 {
+            height: 328px;
+            width: 328px;
+            border: 1px solid #9982f8;
+            background-color: #04437b;
+            border-radius: 50%;
+            background-image: radial-gradient(circle 390px at 37% 92%, rgba(4, 67, 123, 0.6) 0%, rgba(153, 130, 248, 0.6) 100%);
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .my-team__image-circle-3 {
+              height: 195px;
+              width: 195px;
+              border: 1px solid #9982f8;
+              background-color: #04437b;
+              border-radius: 50%;
+              background-image: radial-gradient(circle 190px at 31.33% 82.57%, rgba(4, 67, 123, 0.6) 0%, rgba(153, 130, 248, 0.6) 100%);
+
+              position: absolute;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .my-team__image-circle-people{
+                height: 40px;
+                width: 40px;
+                border: 1px solid #9982f8;
+                border-radius: 50%;
+                background-color: #04437a;
+                background-image: radial-gradient(circle 28px at 46.15% 56.87%, rgba(4, 67, 123, 0.6) 0%, rgba(153, 130, 248, 0.6) 100%);
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                  width: 15px;
+                  height: 20px;
+                  fill: #9982f8;
+                }
+
+              }
+              .people-2 {
+                top: -4px;
+                left: 24px;
+              }
+              .people-3{
+                top: 97px;
+                left: -16px;
+              }
+              .people-4{
+                bottom: -16px;
+                left: 60px;
+              }
+              .people-5{
+                bottom: 32px;
+                right: -6px;
+              }
+
+              .my-team__image-group{
+                position: relative;
+                top: 15px;
+                right: -6.2rem;
+                display: flex;
+                align-items: flex-end;
+
+                .people-6{
+                  bottom: 3.5rem;
+                  right: 3rem;
+                  border: 1px solid #fb9a50;
+                  position: relative;
+                  svg {
+                    fill: #fb9a50;
+                  }
+                }
+                .people-7{
+                  bottom: 3.5rem;
+                  right: 1.2rem;
+                  border: 1px solid #fb9a50;
+                  position: relative;
+                  svg {
+                    fill: #fb9a50;
+                  }
+                }
+                .people-8{
+                  bottom: 3.5rem;
+                  right: -0.3rem;
+                  border: 1px solid #fb9a50;
+                  position: relative;
+                  svg {
+                    fill: #fb9a50;
+                  }
+                }
+              }
+            }
+          }
+          .percent-1{
+            top: -7.5rem;
+            right: -4rem;
+            &:after{
+              content: "";
+              bottom: -1.5rem;
+              right: 4rem;
+              width: 15px;
+              height: 15px;
+              display: block;
+              position: absolute;
+              transform: rotate(-45deg);
+              border-bottom: 2px solid #fb9a50;
+              border-left: 2px solid #fb9a50;
+            }
+            &:before{
+              content: "";
+              width: 85px;
+              height: 50px;
+              display: flex;
+              position: absolute;
+              border-top: 3px solid #fb9a50;
+              border-left: 3px solid #fb9a50;
+              border-right: 3px solid #fb9a50;
+              border-radius: 51px 51px 0 0;
+              transform: rotate(0deg);
+              top: 26px;
+              right: -12px;
+
+            }
+          }
+          .percent-2{
+            top: -11rem;
+            right: -4.3rem;
+            &:before{
+              content: "";
+              width: 155px;
+              height: 110px;
+              display: flex;
+              position: absolute;
+              border-top: 3px solid #fb9a50;
+              //border-left: 3px solid #fb9a50;
+              border-right: 3px solid #fb9a50;
+              border-radius: 82px 60px 0 0;
+              transform: rotate(0deg);
+              top: 26px;
+              right: -25px;
+            }
+          }
+          .percent-3{
+            top: -14.5rem;
+            right: -5rem;
+            &:before{
+              content: "";
+              width: 180px;
+              height: 162px;
+              display: flex;
+              position: absolute;
+              border-top: 3px solid #fb9a50;
+              //border-left: 3px solid #fb9a50;
+              border-right: 3px solid #fb9a50;
+              border-radius: 108px 80px 0 0;
+              transform: rotate(0deg);
+              top: 26px;
+              right: -25px;
+            }
+          }
+
+        }
+        .my-team__image-circle-percent-wrapper {
+          position: relative;
+          .my-team__image-circle-percent {
+            width: 52px;
+            height: 52px;
+            position: relative;
+
+            border: 1.5px solid #fb9a50;
+            border-radius: 50%;
+            background-color: #04437a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fb9a50;
+            background-image: radial-gradient(circle 28px at 46.15% 56.87%, rgba(4, 67, 123, 0.6) 0%, rgba(153, 130, 248, 0.6) 100%);
+
+          }
+        }
+      }
+    }
+
+  }
+  .asd{
+
   }
 
   .my-creators-wrapper {
@@ -537,6 +835,9 @@ body {
     box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 436px;
     background-color: #ffffff;
+    position: relative;
+    z-index: 1;
+
 
     .slick-prev {
       border-radius: 50%;
@@ -546,8 +847,9 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      top: calc(100% + 50px);
+      top: calc(100% + 60px);
       left: 43%;
+      padding-right: 4px;
 
       &:before {
         content: "";
@@ -567,7 +869,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      top: calc(100% + 50px);
+      top: calc(100% + 60px);
+      padding-left: 4px;
       right: 43%;
 
       &:before {
@@ -593,6 +896,7 @@ body {
           background-color: #fcfcfc;
           position: relative;
           margin: 10px;
+          overflow: hidden;
 
           .creator__image {
             height: 335px;
@@ -645,13 +949,12 @@ body {
 
           &__info {
             padding: 15px 15px 60px 15px;
-            opacity: 0;
+            opacity: 1;
             width: 100%;
             height: 100%;
-            background: #f9f7ff;
-            border-radius: 45px;
+            transition: .3s ease;
             position: absolute;
-            top: 0;
+            top: 21rem;
             z-index: 12;
             overflow: hidden;
 
@@ -670,8 +973,9 @@ body {
           }
 
           &:hover .creator__info {
-            opacity: 1;
+            top: 0;
             transition: 0.3s ease;
+            background: #f9f7ff;
           }
         }
       }
@@ -684,8 +988,9 @@ body {
     background-size: cover;
     position: relative;
     background-position: center;
-    padding: 70px 0 30px 0;
-    z-index: -1;
+    padding: 35rem 0 30px 0;
+    margin-top: -30rem;
+    z-index: 0;
 
     &:after {
       content: "";
