@@ -16,12 +16,13 @@ body {
 
   .list-group {
     position: fixed;
-    top: 100px;
-    right: 80px;
+    top: 50%;
+    right: 3rem;
     text-align: end;
     overflow: hidden;
     z-index: 999;
     font-size: 12px;
+    transform: translateY(-50%);
 
     .list-group-item {
       color: white;
@@ -96,7 +97,7 @@ body {
     .header {
       display: flex;
       width: 100%;
-      padding: 0 150px;
+      //padding: 0 150px;
       justify-content: center;
 
       .header__logo {
@@ -126,7 +127,7 @@ body {
         a.youtube-link {
           svg {
             width: 26px;
-            height: 20px;
+            height: 26px;
             fill: white;
           }
         }
@@ -170,14 +171,23 @@ body {
     }
 
     .header-content {
+      padding-top: 8rem;
       .header-content__title {
-        margin-bottom: 65px;
+        margin-bottom: 3.5rem;
 
         h1 {
+          font-size: 30px;
+          font-weight: 400;
+          text-transform: uppercase;
           color: white;
+          letter-spacing: 0.75px;
 
           span {
             color: #fb9a50;
+            letter-spacing: 0.75px;
+            font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
           }
         }
       }
@@ -187,6 +197,10 @@ body {
 
         p {
           color: white;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 26px;
+          letter-spacing: 0.4px;
         }
       }
 
@@ -214,9 +228,8 @@ body {
   }
 
   .why-me-wrapper {
-    padding: 65px 0 125px 0;
+    padding: 65px 0 65px 0;
     width: auto;
-    height: 787px;
     box-shadow: 2px 5px 23px 1px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 436px;
     background-color: #ffffff;
@@ -226,19 +239,17 @@ body {
     h2 {
       color: #11306d;
       text-transform: uppercase;
-      margin-bottom: 25px;
+      margin: 1rem 0;
     }
 
     .content {
       display: flex;
-      justify-content: space-between;
 
       &__img {
+        margin-top: 3rem;
       }
 
       &__list {
-        width: 55%;
-
         .advantages {
           h3 {
             color: #fb9a50;
@@ -299,6 +310,7 @@ body {
       svg {
         width: 20px;
         height: 20px;
+        fill: #11306d;
       }
     }
 
@@ -312,7 +324,7 @@ body {
         height: 30px;
         border-bottom: 1px solid #fb9a50;
         width: 304px;
-        margin-bottom: 35px;
+        margin-bottom: 28px;
         color: #11306d;
 
         &::placeholder {
@@ -326,6 +338,8 @@ body {
         border: none;
         background-color: #fb9a50;
         color: white;
+        height: 47px;
+        margin-top: 45px;
       }
     }
 
@@ -357,28 +371,34 @@ body {
 
     h2 {
       color: #ffffff;
+      margin: 3.5rem 0 70px 0;
       font-size: 30px;
-      margin: 65px 0 70px 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
     }
 
     .investments-wrapper-content {
       .row {
-        display: flex;
-        justify-content: space-between;
 
         .invest-advantages {
-          margin-bottom: 60px;
-          max-width: 500px;
+          margin-bottom: 2.5rem;
 
           h3 {
             color: #fb9a50;
             font-size: 16px;
             text-transform: uppercase;
+            svg {
+              width: 20px;
+              height: 20px;
+              fill: #fb9a50;
+            }
           }
 
           p {
             margin-top: 25px;
             font-size: 16px;
+            line-height: 19px;
             color: white;
           }
         }
@@ -408,7 +428,7 @@ body {
     box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
     border-radius: 435px 0 1px;
     background-color: #ffffff;
-    margin-top: -830px;
+    margin-top: -57.5rem;
     padding-top: 60px;
 
     h2 {
@@ -416,7 +436,7 @@ body {
       font-size: 30px;
       text-transform: uppercase;
       letter-spacing: 0.75px;
-      margin-bottom: 130px;
+      margin-bottom: 4rem;
     }
 
     .my-way {
@@ -449,11 +469,11 @@ body {
         .point-mvp__circle {
           display: flex;
           border-radius: 50%;
+          margin: 1rem 0;
           height: 50px;
           width: 50px;
           align-items: center;
           justify-content: center;
-          border-radius: 50%;
           box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
           color: #fb9a50;
           background-color: #ffffff;
@@ -467,7 +487,7 @@ body {
       }
 
       .q1 {
-        top: 1.4rem;
+        top: .4rem;
         left: 40%;
         transition: .3s ease;
 
@@ -475,7 +495,7 @@ body {
           content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
           display: none;
           width: 300px;
-         bottom: 43rem;
+         bottom: 39rem;
           position: absolute;
           font-size: 14px;
           color: #fb9a50;
@@ -495,13 +515,13 @@ body {
       }
 
       .q2 {
-        top: 1.4rem;
+        top: .4rem;
         left: 54.8%;
         &:before {
           content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
           display: none;
           width: 300px;
-          bottom: 43rem;
+          bottom: 39rem;
           position: absolute;
           font-size: 14px;
           color: #fb9a50;
@@ -521,13 +541,13 @@ body {
       }
 
       .q3 {
-        top: 12.6rem;
+        top: 11.6rem;
         left: 29.8%;
         &:before {
           content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
           display: none;
           width: 300px;
-          bottom: 29rem;
+          bottom: 23.5rem;
           position: absolute;
           font-size: 14px;
           color: #fb9a50;
@@ -547,13 +567,13 @@ body {
       }
 
       .q4 {
-        top: 12.6rem;
+        top: 11.6rem;
         left: 44.5%;
         &:before {
           content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
           display: none;
           width: 300px;
-          bottom: 29rem;
+          bottom: 23.5rem;
           position: absolute;
           font-size: 14px;
           color: #fb9a50;
@@ -584,8 +604,6 @@ body {
     background: #11306d;
     background-image: url("../images/5block.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -21rem ;
     position: relative;
     &:after {
       content: "";
@@ -784,11 +802,11 @@ body {
           }
           .percent-3{
             top: -14.5rem;
-            right: -5rem;
+            right: -4.7rem;
             &:before{
               content: "";
-              width: 180px;
-              height: 162px;
+              width: 210px;
+              height: 168px;
               display: flex;
               position: absolute;
               border-top: 3px solid #fb9a50;
@@ -796,8 +814,8 @@ body {
               border-right: 3px solid #fb9a50;
               border-radius: 108px 80px 0 0;
               transform: rotate(0deg);
-              top: 26px;
-              right: -25px;
+              top: 20px;
+              right: -30.8px;
             }
           }
 
@@ -837,6 +855,15 @@ body {
     background-color: #ffffff;
     position: relative;
     z-index: 1;
+
+    h2{
+      color: #11306d;
+      font-size: 30px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+      margin-bottom: 3rem;
+    }
 
 
     .slick-prev {
@@ -884,7 +911,7 @@ body {
     }
 
     .main-slider {
-      max-width: 1500px;
+      max-width: 1600px;
       margin: 0 auto;
 
       .main-slide {
@@ -967,7 +994,7 @@ body {
             }
 
             .creator-info {
-              height: 280px;
+              height: 285px;
               overflow: hidden;
             }
           }
@@ -1054,6 +1081,23 @@ body {
 
       .contacts {
         display: flex;
+        margin-bottom: 1.5rem;
+        h3 {
+          color: #fb9a50;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.4px;
+        }
+        p {
+
+          color: #11306d;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 28px;
+          margin: 0;
+        }
 
         .contact {
           margin-right: 30px;
@@ -1061,6 +1105,9 @@ body {
           h2 {
             color: #11306d;
             font-size: 30px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
           }
         }
 
@@ -1068,18 +1115,7 @@ body {
           width: 250px;
           position: relative;
           margin-left: 60px;
-
-          h3 {
-            color: #fb9a50;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          }
-
           .address__city {
-            p {
-              margin-bottom: 15px;
-              line-height: 30px;
-            }
           }
 
           &:after {
@@ -1099,16 +1135,9 @@ body {
           position: relative;
           margin-left: 60px;
 
-          h3 {
-            color: #fb9a50;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          }
+
 
           .phone__numbers {
-            p {
-              line-height: 30px;
-            }
           }
 
           &:after {
@@ -1127,16 +1156,8 @@ body {
           width: 250px;
           margin-left: 60px;
 
-          h3 {
-            color: #fb9a50;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-          }
-
           .mail__address {
-            p {
-              line-height: 30px;
-            }
+
           }
         }
       }
@@ -1144,10 +1165,11 @@ body {
 
     .footer_link {
       display: flex;
+      align-items: center;
 
       .link-social {
-        margin-right: 155px;
-        padding-left: 240px;
+        display: flex;
+        padding-left: 5rem;
 
         a.facebook-link {
           margin-right: 33px;
@@ -1164,7 +1186,7 @@ body {
 
           svg {
             width: 26px;
-            height: 20px;
+            height: 26px;
             fill: #fb9a50;
           }
         }
@@ -1178,11 +1200,9 @@ body {
         }
       }
 
-      .link-market {
         .link-app-store {
           display: inline-block;
-          margin-right: 195px;
-
+          padding-left: 5rem;
           svg {
             width: 112px;
             height: 37px;
@@ -1191,13 +1211,13 @@ body {
 
         .link-play-market {
           display: inline-block;
-
+          padding-left: 5rem;
           svg {
             width: 125px;
             height: 37px;
           }
         }
-      }
+
     }
   }
 }
@@ -1230,4 +1250,14 @@ body {
     transform: scale(1);
   }
 
+}
+
+@media screen and (max-width: 1640px) {
+  .wrapper .my-creators-wrapper .main-slider{
+    max-width: 1100px;
+  }
+
+  .wrapper .my-way-wrapper h2{
+    margin-left: 5rem;
+  }
 }
