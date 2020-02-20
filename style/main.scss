@@ -1261,3 +1261,8 @@ body {
     margin-left: 5rem;
   }
 }
+@media screen and (max-width: 1320px) {
+  .wrapper .my-way-wrapper {
+    border-radius: 250px 0 0px;
+  }
+}
