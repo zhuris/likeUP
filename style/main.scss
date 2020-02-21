@@ -249,7 +249,8 @@ body {
         }
 
         .link-play-market {
-          height: fit-content;
+          height: 37px;
+          width: 119px;
 
           svg {
             width: 100%;
@@ -465,7 +466,11 @@ body {
     }
 
     .my-way {
-      width: 80%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 570px;
+      flex-direction: column;
 
       svg {
         margin-bottom: -45px;
@@ -485,162 +490,109 @@ body {
 
         }
       }
+      &__road-wrapper{
+        position: absolute;
+        width: 2px;
+        height: 570px;
+        background: #11306d;
+        z-index: -1;
+        overflow: hidden;
+
+
+      }
+      &__road-container{
+        width: 2px;
+        height: 570px;
+        background: #fb9a50;
+        position: absolute;
+        top: -100%;
+        animation: road 5s linear infinite ;
+      }
     }
 
-    .my-way__container {
-      position: absolute;
-      display: flex;
-      width: 100%;
-      height: 100%;
-
-
-
-
-
-      .point-mvp {
+      .point {
         display: flex;
         flex-direction: column;
         max-width: 100px;
         align-items: center;
         position: relative;
-        left: 1000px;
-        top: -14px;
-
+        height: fit-content;
+        margin-bottom: 100px;
         span {
-          color: #11306d;
+          color: #fb9a50;
         }
 
-        .point-mvp__circle {
+        .point__circle {
           display: flex;
           border-radius: 50%;
-          margin: 1rem 0;
-          height: 50px;
-          width: 50px;
+          height: 30px;
+          width: 30px;
           align-items: center;
           justify-content: center;
           box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
           color: #fb9a50;
           background-color: #ffffff;
         }
-
-        p.point-mvp__subtitle {
-          text-align: center;
+        .point__date{
+          position: absolute;
+          left: -5rem;
           color: #11306d;
-          font-size: 14px;
-        }
-      }
-
-      .q1 {
-        top: .4rem;
-        left: 40%;
-        transition: .3s ease;
-
-        &:before {
-          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
-          display: none;
-          width: 300px;
-         bottom: 39rem;
-          position: absolute;
-          font-size: 14px;
-          color: #fb9a50;
-          letter-spacing: 0.35px;
-         text-align: center;
+          font-size: 12px;
         }
 
-        &:hover .point-mvp__circle{
-          border: 2px solid #fb9a50;
-          transition: .3s ease;
-        }
-        &:hover.q1:before {
-            display: flex;
-          transition: .5s ease;
-
-        }
-      }
-
-      .q2 {
-        top: .4rem;
-        left: 54.8%;
-        &:before {
-          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
-          display: none;
-          width: 300px;
-          bottom: 39rem;
-          position: absolute;
-          font-size: 14px;
-          color: #fb9a50;
-          letter-spacing: 0.35px;
+        .point__subtitle {
           text-align: center;
-        }
-
-        &:hover .point-mvp__circle {
-          transition: .3s ease;
-          border: 2px solid #fb9a50;
-        }
-        &:hover.q2:before {
-          display: flex;
-          transition: .5s ease;
-
-        }
-      }
-
-      .q3 {
-        top: 11.6rem;
-        left: 29.8%;
-        &:before {
-          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
-          display: none;
-          width: 300px;
-          bottom: 23.5rem;
           position: absolute;
-          font-size: 14px;
+          right: -7.5rem;
+          color: #11306d;
+          font-size: 10px;
+          width: 110px;
+        }
+        .point__title{
+          font-size: 10px;
           color: #fb9a50;
-          letter-spacing: 0.35px;
-          text-align: center;
-        }
-
-        &:hover .point-mvp__circle {
-          transition: .3s ease;
-          border: 2px solid #fb9a50;
-        }
-        &:hover.q3:before {
-          display: flex;
-          transition: .5s ease;
-
-        }
-      }
-
-      .q4 {
-        top: 11.6rem;
-        left: 44.5%;
-        &:before {
-          content: "Создание и управление структурой в маркетинговой программе вознаграждений ";
-          display: none;
-          width: 300px;
-          bottom: 23.5rem;
+          opacity: 0;
           position: absolute;
-          font-size: 14px;
-          color: #fb9a50;
-          letter-spacing: 0.35px;
+          bottom: -110px;
+          left: -45px;
           text-align: center;
+          width: 130px;
+        }
+        .title-1{
+          animation: point-sub-1 5s ease both;
+        }
+        .title-2{
+animation: point-sub-2 5s ease both;
+        }
+        .title-3{
+animation: point-sub-3 5s ease both;
+        }
+        .title-4{
+animation: point-sub-4 5s ease both ;
         }
 
-        &:hover .point-mvp__circle {
-          transition: .3s ease;
-          border: 2px solid #fb9a50;
-        }
-        &:hover.q4:before {
-          display: flex;
-          transition: .5s ease;
-
-        }
       }
-
+      .q1 .point__circle {
+        margin-top: 20px;
+        animation: point-q1 5s ease  infinite;
+        border: 1px solid transparent;
+      }
+      .q2 .point__circle{
+        animation: point-q2 5s ease infinite;
+        border: 1px solid transparent;
+      }
+      .q3 .point__circle{
+        animation: point-q3 5s ease infinite;
+        border: 1px solid transparent;
+      }
+      .q4 .point__circle{
+        animation: point-q4 5s ease infinite;
+        border: 1px solid transparent;
+      }
       .active {
         border: 2px solid #fb9a50;
         animation: wave 1s ease infinite;
       }
-    }
   }
 
   .my-team-wrapper {
@@ -883,9 +835,6 @@ body {
         }
       }
     }
-
-  }
-  .asd{
 
   }
 
@@ -1138,7 +1087,7 @@ body {
         }
 
         .contact {
-          margin-right: 30px;
+          //margin-right: 30px;
 
           h2 {
             @include h2-desktop();
@@ -1147,9 +1096,7 @@ body {
         }
 
         .address {
-          width: 250px;
           position: relative;
-          //margin-left: 60px;
           .address__city {
           }
 
@@ -1161,20 +1108,13 @@ body {
             position: absolute;
             background-color: #fb9a50;
             top: 30px;
-            right: 0px;
+            right: 35px;
           }
         }
-
         .phone {
-          width: 250px;
           position: relative;
-          //margin-left: 60px;
-
-
-
           .phone__numbers {
           }
-
           &:after {
             content: "";
             display: inline-flex;
@@ -1183,16 +1123,11 @@ body {
             position: absolute;
             background-color: #fb9a50;
             top: 30px;
-            right: 0px;
+            right: 35px;
           }
         }
-
         .mail {
-          width: 250px;
-          //margin-left: 60px;
-
           .mail__address {
-
           }
         }
       }
@@ -1204,7 +1139,7 @@ body {
 
       .link-social {
         display: flex;
-        padding-left: 5rem;
+
 
         a.facebook-link {
           margin-right: 33px;
@@ -1237,7 +1172,6 @@ body {
 
         .link-app-store {
           display: inline-block;
-          padding-left: 5rem;
           svg {
             width: 112px;
             height: 37px;
@@ -1246,7 +1180,6 @@ body {
 
         .link-play-market {
           display: inline-block;
-          padding-left: 5rem;
           svg {
             width: 125px;
             height: 37px;
@@ -1268,28 +1201,11 @@ body {
   stroke-width: 4px;
 }
 
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 
-@keyframes wave {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-
-}
 
 @media screen and (max-width: 576px){
   .wrapper .header-wrapper{
-    padding: 25px 0 30px 0;
+    padding: 12px 0 30px 0;
   }
 
   .wrapper .list-group{
@@ -1306,11 +1222,11 @@ body {
     height: 22px;
   }
   .wrapper .header-wrapper .header-content{
-    padding-top: 4rem;
+    padding: 3rem 0 0;
   }
   .wrapper .header-wrapper .header-content .header-content {
     &__title {
-      margin-bottom: 2rem;
+      margin-bottom: 1.3rem;
 
       h1 {
         letter-spacing: 0.35px;
@@ -1323,6 +1239,7 @@ body {
       }
     }
     &__subtitle{
+      margin: 0;
       p{
         font-size: 12px;
         font-weight: 500;
@@ -1342,18 +1259,20 @@ body {
     }
   }
   .wrapper .why-me-wrapper  {
-    padding: 30px 0 30px 0;
+    padding: 8px 0 30px 0;
     border-radius: 0 0 150px;
     h2 {
       @include h2-mobile();
       color: #11306d;
       text-align: center;
+      margin: 1.2rem 0;
     }
     .content__img{
       display: none;
     }
     .content__list{
       .advantages{
+        margin-bottom: 35px;
         h3{
           font-size: 12px;
           font-weight: 400;
@@ -1362,64 +1281,281 @@ body {
         p{
           @include p-mobile();
           color: #11306d;
+          margin: 0;
         }
       }
     }
   }
 
-  .wrapper .investments-wrapper h2{
-    @include h2-mobile();
-    text-align: center;
-  }
-  .wrapper .investments-wrapper .investments-wrapper-content .row .invest-advantages {
-    h3 {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    }
-    P{
-      @include p-mobile();
+//investment container////////////////////////////////////////////////////////////
 
+ .wrapper .investments-wrapper {
+    .container {
+    }
+    //modal
+    .popup-fade {
+      display: none;
+    }
+    .popup-fade:before {
+      content: "";
+      background: #000;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      z-index: 9999;
     }
 
+    .popup {
+      position: fixed;
+      justify-content: center;
+      bottom: 33%;
+      left: 50%;
+      width: 485px;
+      margin-left: -200px;
+      background: #fff;
+      border: 1px solid orange;
+      border-radius: 4px;
+      z-index: 99999;
+      opacity: 1;
+      padding: 90px 0 45px 0;
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #11306d;
+      }
+    }
+
+    .modals-form {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      input {
+        height: 30px;
+        border-bottom: 1px solid #fb9a50;
+        width: 304px;
+        margin-bottom: 28px;
+        color: #11306d;
+
+        &::placeholder {
+          color: #fb9a50;
+          font-size: 12px;
+        }
+      }
+
+      input.modals-form__confirm {
+        border-radius: 7px;
+        border: none;
+        background-color: #fb9a50;
+        color: white;
+        height: 47px;
+        margin-top: 45px;
+      }
+    }
+
+    background-image: url(../images/3block.png);
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 500px;
+    margin-top: -32rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 0;
+      position: absolute;
+      background-image: linear-gradient(
+                      to right,
+                      rgba(48, 87, 165, 0.88) 0%,
+                      rgba(48, 87, 165, 0.88) 19%,
+                      rgba(17, 48, 109, 0.88) 79%,
+                      rgba(17, 48, 109, 0.88) 89%
+      );
+      opacity: 0.9;
+    }
+
+    h2 {
+      @include h2-mobile();
+      margin: 3.5rem 0 2rem 0;
+      text-align: center;
+    }
+
+    .investments-wrapper-content {
+      .row {
+
+        .invest-advantages {
+          margin-bottom: 1rem;
+
+          h3 {
+            color: #fb9a50;
+            font-size: 12px;
+            margin-bottom: 1rem;
+            svg {
+              width: 20px;
+              height: 20px;
+              fill: #fb9a50;
+            }
+          }
+
+          p {
+            margin-top: 0;
+            @include p-mobile();
+          }
+        }
+      }
+    }
+
+    .investments-wrapper__btn {
+
+      margin-bottom: 40px;
+
+      button {
+        border-radius: 7px;
+        background-color: #fb9a50;
+        color: white;
+        font-size: 12px;
+        padding: 6px 10px;
+        text-transform: uppercase;
+        margin: 0;
+
+      }
+    }
   }
-  .wrapper .investments-wrapper .investments-wrapper__btn button{
-    padding: 6px 12px ;
-    font-size: 12px;
-  }
-  .wrapper .investments-wrapper .popup{
-    position: fixed;
-    justify-content: center;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    border-radius: 4px;
-    z-index: 99999;
-    opacity: 1;
-    padding: 90px 0 45px 0;
-  }
+
+  // END investment container////////////////////////////////////////////////////////////
+
+
+
   .wrapper .my-way-wrapper{
     border-radius: 150px 0 0 ;
   }
-  .wrapper .my-creators-wrapper h2{
-    @include h2-mobile();
-    color: #11306d;
-    text-align: center;
+  .wrapper .my-way-wrapper .my-way svg {
+    display: none;
   }
-  .wrapper .my-creators-wrapper{
-    border-radius: 0 0 150px;
-  }
-    .wrapper .my-creators-wrapper .main-slider{
-      max-width: 300px;
+  //creators container////////////////////////////////////////////////////////////
 
-    .slick-next{
-      right: 30%;
+  .wrapper .my-creators-wrapper {
+    border-radius: 0 0 150px;
+    padding: 30px 0 60px 0;
+    h2{
+      @include h2-mobile();
+      color: #11306d;
+      text-align: center;
+      margin-bottom: 1rem;
     }
-    .slick-prev{
-      left: 30%;
+    .slick-prev {
+      left: -10%;
+      height: 21px;
+      width: 21px;
+      top: 50% ;
+      &:before {
+        content: "";
+      }
+      svg {
+        width: 6px;
+        height: 12px;
+        margin-left: 3px;
+      }
+    }
+    .slick-next {
+      right: -10%;
+      height: 21px;
+      width: 21px;
+      top: 50%  ;
+      &:before {
+        content: "";
+      }
+      svg {
+        width: 6px;
+        height: 12px;
+      }
+    }
+    .main-slider {
+      max-width: 190px;
+      .main-slide {
+        .creator {
+          width: 165px;
+          height: 245px;
+          overflow: hidden;
+          .creator__image {
+            height: 190px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 45px 45px 0 0;
+            }
+          }
+          .creator__content {
+            .creator-name {
+              padding-bottom: 3px;
+              &:after {
+                bottom: 0px;
+                left: 50%;
+              }
+              p {
+                margin: 0;
+                font-size: 9px;
+                letter-spacing: 0.4px;
+              }
+            }
+            .creator-position {
+              padding-top: 0px;
+              p {
+                text-transform: uppercase;
+                font-size: 9px;
+                letter-spacing: 0.4px;
+              }
+            }
+          }
+
+          &__info {
+            padding: 15px 15px 60px 15px;
+            width: 100%;
+            height: 100%;
+            top: 75%;
+            p {
+              @include p-mobile();
+              color: #11306d;
+            }
+            .creator-position {
+              margin-bottom: 0px;
+            }
+            .creator-info {
+              height: 150px;
+              p{
+                @include p-mobile();
+                color: #11306d;
+                font-size: 9px;
+                font-weight: 500;
+                line-height: 14.56px;
+                height: 80%;
+              }
+            }
+          }
+        }
+      }
     }
   }
+
+  //END creators container/////////////////////////////////////////////////////////////
+
+  //partners container
   .wrapper .partners-wrapper .container .content{
     display: flex;
   }
@@ -1427,6 +1563,7 @@ body {
     justify-content: center;
   }
   .wrapper .partners-wrapper {
+    margin-top: -33rem;
     h2 {
       @include h2-mobile();
       text-align: center;
@@ -1440,116 +1577,281 @@ body {
     height: 80px;
   }
 
+  // END partners container////////////////////////////////////////////////////////////
 
-  .wrapper footer.footer .container .contacts{
-    .contact, .address, .phone, .mail{
-      text-align: center;
-      h2{
-        @include h2-mobile();
-        color: #11306d;
+//my team container//////////////////////////////////////////////////////////
+  .wrapper .my-team-wrapper {
+    padding-bottom: 50px;
+    .my-team__container {
+      padding:  0;
+      .my-team__content {
+        margin-bottom: 25px;
+        h2 {
+          @include h2-mobile();
+          text-align: center;
+          margin: 25px 0  35px 0;
+        }
+        p {
+          @include p-mobile();
+        }
+      }
+      .my-team__image {
+        justify-content: center;
+        .my-team__image-circle-1 {
+          height: 285px;
+          width: 285px;
+          .my-team__image-circle-2 {
+            height: 208px;
+            width: 208px;
+            .my-team__image-circle-3 {
+              height: 123px;
+              width: 123px;
+              .my-team__image-circle-people{
+                height: 25px;
+                width: 25px;
+                svg {
+                  width: 15px;
+                  height: 20px;
+                  fill: #9982f8;
+                }
 
+              }
+              .people-2 {
+                top: -4px;
+                left: 17px;
+              }
+              .people-3{
+                top: 60px;
+                left: -10px;
+              }
+              .people-4{
+                bottom: -11px;
+                left: 38px;
+              }
+              .people-5{
+                bottom: 20px;
+                right: -6px;
+              }
+              .my-team__image-group{
+                top: 70px;
+                right: -6rem;
+                position: absolute;
+                .people-6{
+                  bottom: 3.5rem;
+                  right: 3rem;
+                }
+                .people-7{
+                  bottom: 3.5rem;
+                  right: 1.7rem;
+                }
+                .people-8{
+                  bottom: 3.5rem;
+                  right: 0.5rem;
+                }
+              }
+            }
+          }
+          .percent-1{
+            top: -5.8rem;
+            right: -1.5rem;
+            &:after{
+              content: none;
+            }
+            &:before{
+              content: none;
+            }
+          }
+          .percent-2{
+            top: -8rem;
+            right: -1.7rem;
+            &:before{
+              content: none;
+            }
+          }
+          .percent-3{
+            top: -10.3rem;
+            right: -1.6rem;
+            &:before{
+              content: none;
+            }
+          }
+        }
+        .my-team__image-circle-percent-wrapper {
+          position: relative;
+          .my-team__image-circle-percent {
+            width: 30px;
+            height: 30px;
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+  //my team container/////////////////////////////////////////////////////
+
+//footer container ///////////////////////////////////////////////////////
+
+  .wrapper footer.footer {
+    padding: 25px 0 30px 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      .contacts {
+        display: flex;
+        margin-bottom: 1.5rem;
+        h3 {
+          color: #fb9a50;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.4px;
+        }
+        p {
+          @include p-mobile();
+          color: #11306d;
+          margin: 0;
+        }
+        .contact {
+
+          h2 {
+            @include h2-mobile();
+            color: #11306d;
+            text-align: center;
+            margin-bottom: 20px;
+          }
+        }
+        .address {
+          position: relative;
+          text-align: center;
+          margin-bottom: 5rem;
+          h3{
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          .address__city {
+            P{
+              font-size: 12px;
+              line-height: 28px;
+            }
+          }
+          &:after {
+            content: "";
+            display: inline-flex;
+            width: 1px;
+            height: 28px;
+            position: absolute;
+            background-color: #fb9a50;
+            top: 5.6rem;
+            right: 50%;
+            transform: rotate(90deg);
+
+          }
+        }
+
+        .phone {
+          position: relative;
+          text-align: center;
+          margin-bottom: 3rem;
+          h3{
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          .phone__numbers {
+            P{
+              font-size: 12px;
+              line-height: 28px;
+            }
+          }
+          &:after {
+            content: "";
+            display: inline-flex;
+            width: 1px;
+            height: 28px;
+            position: absolute;
+            background-color: #fb9a50;
+            top: 5.6rem;
+            right: 50%;
+          transform: rotate(90deg);
+          }
+        }
+        .mail {
+          text-align: center;
+          h3{
+            font-size: 12px;
+            margin-bottom: 10px;
+          }
+          .mail__address {
+            P{
+              font-size: 12px;
+              line-height: 28px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer_link {
+      display: flex;
+      align-items: center;
+
+      .link-social {
+        display: flex;
+        padding: 0;
+      justify-content: center;
+        margin-bottom: 25px;
+        a.facebook-link {
+          margin-right: 33px;
+
+          svg {
+            width: 15px;
+            height: 15px;
+            fill: #fb9a50;
+          }
+        }
+
+        a.youtube-link {
+          margin-right: 33px;
+
+          svg {
+            width: 20px;
+            height: 15px;
+            fill: #fb9a50;
+          }
+        }
+
+        a.instagram-link {
+          svg {
+            width: 15px;
+            height: 15px;
+            fill: #fb9a50;
+          }
+        }
+      }
+
+      .link-app-store {
+        display: inline-block;
+        padding: 0;
+        text-align: end;
+        svg {
+          width: 74px;
+          height: 24px;
+        }
+      }
+
+      .link-play-market {
+        display: inline-block;
+        padding: 0;
+        text-align: start;
+        svg {
+          width: 77px;
+          height: 24px;
+        }
       }
 
     }
   }
-  .wrapper footer.footer .container .contacts .mail{
-    text-align: center;
-  }
-  //.wrapper footer.footer .container .contacts .contact{
-  //  text-align: center;
-  //}
-  .wrapper .my-way-wrapper .my-way svg {
-    display: none;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__content h2{
-    @include h2-mobile();
-    text-align: center;
-    margin: 25px 0  35px 0;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image{
-    justify-content: center;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1{
-    height: 285px;
-    width: 285px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2{
-    height: 208px;
-    width: 208px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3{
-    height: 123px;
-    width: 123px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-circle-people{
-    height: 25px;
-    width: 25px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .people-2 {
-    top: -4px;
-    left: 17px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .people-3 {
-    top: 60px;
-    left: -10px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .people-4 {
-    bottom: -11px;
-    left: 38px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .people-5 {
-    bottom: 20px;
-    right: -6px;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group {
-    top: 70px;
-    right: -6rem;
-    position: absolute;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1 {
-    top: -5.8rem;
-    right: -1.5rem;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2 {
-    top: -8rem;
-    right: -1.7rem;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3 {
-    top: -10.3rem;
-    right: -1.6rem;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-6 {
-    bottom: 3.5rem;
-    right: 3rem;
-
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-7 {
-    bottom: 3.5rem;
-    right: 1.7rem;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-8 {
-    bottom: 3.5rem;
-    right: 0.5rem;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper .my-team__image-circle-percent{
-    width: 30px;
-    height: 30px;
-    }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1:before{
-    content: none;
-  }
-
-  .wrapper footer.footer .footer_link .link-social{
-    display: flex;
-    justify-content: center;
-  }
-  .wrapper footer.footer .footer_link .link-app-store{
-    padding: 0;
-  }
-  .wrapper footer.footer .footer_link .link-play-market{
-    padding: 0;
-  }
-
+//footer container /////////////////////////////////////////////////////
 }
 
 
@@ -1567,5 +1869,171 @@ body {
 @media screen and  (min-width: 1000px)  and (max-width: 1320px) {
   .wrapper .my-way-wrapper {
     border-radius: 250px 0 0px;
+  }
+}
+
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+
+}
+@keyframes road {
+  from {
+    top: -100%;
+
+  }
+  to{
+    top: 0%;
+  }
+  
+}
+@keyframes point-q1 {
+  0%{
+    border-color: transparent;
+  }
+  12%{
+    border-color: transparent;
+  }
+  13%{
+    border-color: #fb9a50;
+  }
+  99%{
+    border-color: #fb9a50;
+  }
+  100%{
+
+  }
+}
+@keyframes point-q2 {
+  0%{
+    border-color: transparent;
+  }
+  24%{
+    border-color: transparent;
+  }
+  25%{
+    border-color: #fb9a50;
+  }
+  99%{
+    border-color: #fb9a50;
+  }
+  100%{
+
+  }
+}
+@keyframes point-q3 {
+  0%{
+    border-color: transparent;
+  }
+  49%{
+    border-color: transparent;
+  }
+  50%{
+    border-color: #fb9a50;
+  }
+  99%{
+    border-color: #fb9a50;
+  }
+  100%{
+
+  }
+}
+@keyframes point-q4 {
+  0%{
+    border-color: transparent;
+  }
+  74%{
+    border-color: transparent;
+  }
+  75%{
+    border-color: #fb9a50;
+  }
+  99%{
+    border-color: #fb9a50;
+  }
+  100%{
+
+  }
+}
+@keyframes point-sub-1 {
+  0%{
+    opacity: 0;
+  }
+  12%{
+    opacity: 0;
+  }
+  13%{
+    opacity: 1;
+  }
+  99%{
+    opacity:1 ;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes point-sub-2 {
+  0%{
+    opacity: 0;
+  }
+  24%{
+    opacity:0 ;
+  }
+  25%{
+    opacity: 1;
+  }
+  99%{
+    opacity:1 ;
+  }
+  100%{
+opacity: 1 ;
+  }
+}
+@keyframes point-sub-3 {
+  0%{
+    opacity: 0;
+  }
+  49%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  99%{
+    opacity:1 ;
+  }
+  100%{
+opacity:1 ;
+  }
+}
+@keyframes point-sub-4 {
+  0%{
+    opacity: 0;
+  }
+  74%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+  99%{
+    opacity: 1;
+  }
+  100%{
+opacity: 1;
   }
 }
