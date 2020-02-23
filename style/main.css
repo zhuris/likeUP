@@ -91,7 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../images/main1block.png");
+  background-image: url("../images/main1block-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -254,7 +254,7 @@ body {
   color: #11306d;
 }
 .wrapper .investments-wrapper {
-  background-image: url(../images/3block.png);
+  background-image: url(../images/3block-min.png);
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
@@ -522,7 +522,7 @@ body {
 .wrapper .my-team-wrapper {
   width: auto;
   background: #11306d;
-  background-image: url("../images/5block.png");
+  background-image: url("../images/5block-min.png");
   background-repeat: no-repeat;
   position: relative;
 }
@@ -631,109 +631,69 @@ body {
   right: -6px;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group {
-  position: relative;
-  top: 15px;
-  right: -6.2rem;
+  top: 25px;
+  right: -9rem;
+  position: absolute;
   display: flex;
-  align-items: flex-end;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-6 {
-  bottom: 3.5rem;
-  right: 3rem;
-  border: 1px solid #fb9a50;
-  position: relative;
-}
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-6 svg {
-  fill: #fb9a50;
+  position: initial;
+  margin-right: 30px;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-7 {
-  bottom: 3.5rem;
-  right: 1.2rem;
-  border: 1px solid #fb9a50;
-  position: relative;
-}
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-7 svg {
-  fill: #fb9a50;
+  position: initial;
+  margin-right: 30px;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-8 {
-  bottom: 3.5rem;
-  right: -0.3rem;
-  border: 1px solid #fb9a50;
-  position: relative;
-}
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-8 svg {
-  fill: #fb9a50;
+  position: initial;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1 {
-  top: -7.5rem;
-  right: -4rem;
-}
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1:after {
-  content: "";
-  bottom: -1.5rem;
-  right: 4rem;
-  width: 15px;
-  height: 15px;
-  display: block;
+  top: -4rem;
+  right: 10rem;
   position: absolute;
-  transform: rotate(-45deg);
-  border-bottom: 2px solid #fb9a50;
-  border-left: 2px solid #fb9a50;
 }
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1:before {
-  content: "";
+.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1 svg {
+  position: absolute;
+  top: -22px;
+  right: 0px;
+  z-index: 0;
   width: 85px;
-  height: 50px;
-  display: flex;
-  position: absolute;
-  border-top: 3px solid #fb9a50;
-  border-left: 3px solid #fb9a50;
-  border-right: 3px solid #fb9a50;
-  border-radius: 51px 51px 0 0;
-  transform: rotate(0deg);
-  top: 26px;
-  right: -12px;
+  height: 150px;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2 {
-  top: -11rem;
-  right: -4.3rem;
-}
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2:before {
-  content: "";
-  width: 155px;
-  height: 110px;
-  display: flex;
+  top: -7rem;
+  right: 6.3rem;
   position: absolute;
-  border-top: 3px solid #fb9a50;
-  border-right: 3px solid #fb9a50;
-  border-radius: 82px 60px 0 0;
-  transform: rotate(0deg);
-  top: 26px;
-  right: -25px;
+}
+.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2 svg {
+  position: absolute;
+  top: 14px;
+  right: -17px;
+  z-index: 0;
+  width: 150px;
+  height: 100px;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3 {
-  top: -14.5rem;
-  right: -4.7rem;
-}
-.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3:before {
-  content: "";
-  width: 210px;
-  height: 168px;
-  display: flex;
+  top: -10rem;
+  right: 2.6rem;
   position: absolute;
-  border-top: 3px solid #fb9a50;
-  border-right: 3px solid #fb9a50;
-  border-radius: 108px 80px 0 0;
-  transform: rotate(0deg);
-  top: 20px;
-  right: -30.8px;
+}
+.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3 svg {
+  position: absolute;
+  top: 15px;
+  right: -27px;
+  z-index: 0;
+  width: 191px;
+  height: 150px;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper {
   position: relative;
+  z-index: 11;
 }
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper .my-team__image-circle-percent {
   width: 52px;
   height: 52px;
+  z-index: 11;
   position: relative;
   border: 1.5px solid #fb9a50;
   border-radius: 50%;
@@ -743,6 +703,18 @@ body {
   justify-content: center;
   color: #fb9a50;
   background-image: radial-gradient(circle 28px at 46.15% 56.87%, rgba(4, 67, 123, 0.6) 0%, rgba(153, 130, 248, 0.6) 100%);
+}
+.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper .circle-percent-1 {
+  opacity: 0;
+  animation: percent-show-1 10s linear infinite;
+}
+.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper .circle-percent-2 {
+  opacity: 0;
+  animation: percent-show-2 10s linear infinite;
+}
+.wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper .circle-percent-3 {
+  opacity: 0;
+  animation: percent-show-3 10s linear infinite;
 }
 .wrapper .my-creators-wrapper {
   width: auto;
@@ -887,7 +859,7 @@ body {
   background: #f9f7ff;
 }
 .wrapper .partners-wrapper {
-  background-image: url("../images/7block.png");
+  background-image: url("../images/7block-min.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1140,7 +1112,7 @@ body {
   }
 
   .wrapper .investments-wrapper {
-    background-image: url(../images/3block.png);
+    background-image: url(../images/3block-min.png);
     width: auto;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1165,16 +1137,17 @@ body {
   .wrapper .investments-wrapper .popup {
     position: fixed;
     justify-content: center;
-    bottom: 33%;
-    left: 50%;
-    width: 485px;
-    margin-left: -200px;
+    top: 0;
+    width: 100%;
+    height: 100vh;
     background: #fff;
     border: 1px solid orange;
     border-radius: 4px;
     z-index: 99999;
     opacity: 1;
-    padding: 90px 0 45px 0;
+    left: 0;
+    margin: 0;
+    padding: 90px 30px 45px 30px;
   }
   .wrapper .investments-wrapper .popup-close {
     position: absolute;
@@ -1195,7 +1168,7 @@ body {
   .wrapper .investments-wrapper .modals-form input {
     height: 30px;
     border-bottom: 1px solid #fb9a50;
-    width: 304px;
+    width: auto;
     margin-bottom: 28px;
     color: #11306d;
   }
@@ -1474,45 +1447,67 @@ body {
     right: -6px;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group {
-    top: 70px;
-    right: -6rem;
+    top: 25px;
+    right: -5.5rem;
     position: absolute;
+    display: flex;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-6 {
-    bottom: 3.5rem;
-    right: 3rem;
+    position: initial;
+    margin-right: 20px;
+    border: 1px solid #fb9a50;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-7 {
-    bottom: 3.5rem;
-    right: 1.7rem;
+    position: initial;
+    margin-right: 15px;
+    border: 1px solid #fb9a50;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .my-team__image-circle-2 .my-team__image-circle-3 .my-team__image-group .people-8 {
-    bottom: 3.5rem;
-    right: 0.5rem;
+    position: initial;
+    border: 1px solid #fb9a50;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1 {
-    top: -5.8rem;
-    right: -1.5rem;
+    top: -2.8rem;
+    right: 6rem;
+    position: absolute;
   }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1:after {
-    content: none;
-  }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1:before {
-    content: none;
+  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1 svg {
+    position: absolute;
+    top: 18px;
+    right: 0;
+    z-index: 0;
+    width: 57px;
+    height: 41px;
+    fill: #fb9a50;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2 {
-    top: -8rem;
-    right: -1.7rem;
+    top: -4.8rem;
+    right: 4rem;
+    position: absolute;
   }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2:before {
-    content: none;
+  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-2 svg {
+    position: absolute;
+    top: 14px;
+    right: -13px;
+    z-index: 0;
+    width: 91px;
+    height: 64px;
+    fill: #fb9a50;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3 {
-    top: -10.3rem;
-    right: -1.6rem;
+    top: -7.3rem;
+    right: 2.6rem;
+    position: absolute;
+    z-index: 11;
   }
-  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3:before {
-    content: none;
+  .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-3 svg {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    z-index: 0;
+    width: 105px;
+    height: 105px;
+    fill: #fb9a50;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-percent-wrapper {
     position: relative;
@@ -1521,6 +1516,7 @@ body {
     width: 30px;
     height: 30px;
     font-size: 9px;
+    z-index: 11;
   }
 
   .wrapper footer.footer {
@@ -1829,6 +1825,57 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes percent-show-1 {
+  0% {
+    opacity: 0;
+  }
+  9% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes percent-show-2 {
+  0% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes percent-show-3 {
+  0% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
