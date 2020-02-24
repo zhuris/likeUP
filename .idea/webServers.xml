@@ -2,14 +2,6 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="33ece930-3360-4d85-8392-f47ccf8d41c8" name="like" url="http:// uspacetest.beget.tech">
-        <fileTransfer host=" uspacetest.beget.tech" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-          <option name="port" value="21" />
-        </fileTransfer>
-      </webServer>
       <webServer id="390659c7-ab50-48eb-b3cb-9673119fa009" name="likeUP" url="http://uspacetest.beget.tech">
         <fileTransfer host="uspacetest.beget.tech" port="21">
           <advancedOptions>

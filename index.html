@@ -4,7 +4,8 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>landing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style/reset.css"/>
     <link rel="stylesheet" href="style/main.css"/>
     <link rel="stylesheet" type="text/css" href="style/slick.css"/>
     <link rel="stylesheet" type="text/css" href="style/slick-theme.css"/>
@@ -20,6 +21,61 @@
         <a class="list-group-item list-group-item-action" href="#creators">создатели</a>
         <a class="list-group-item list-group-item-action" href="#partners">партнеры</a>
         <a class="list-group-item list-group-item-action" href="#footer">контакты</a>
+    </div>
+    <div class="menu-mob">
+        <div class="menu-mob__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-mob__links">
+            <a href="#"  class="menu-mob__links-item">ГЛАВНАЯ</a>
+            <a href="" class="menu-mob__links-item">ПОЧЕМУ Я </a>
+            <a href="" class="menu-mob__links-item">ИНВЕСТОРАМ</a>
+            <a href="" class="menu-mob__links-item">МОЙ ПУТЬ</a>
+            <a href="" class="menu-mob__links-item">ПРИСОЕДИНЯЙСЯ</a>
+            <a href="" class="menu-mob__links-item">СОЗДЯТЕЛИ</a>
+            <a href="" class="menu-mob__links-item">ПАРТНЕРЫ</a>
+            <a href="" class="menu-mob__links-item">КОНТАКТЫ</a>
+            <div class="menu-mob__links-social">
+                <a class="facebook-link" href="#">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="m75 512h167v-182h-60v-60h60v-75c0-41.355469 33.644531-75 75-75h75v60h-60c-16.542969 0-30 13.457031-30 30v60h87.292969l-10 60h-77.292969v182h135c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-105v-122h72.707031l20-120h-92.707031v-30h90v-120h-105c-57.898438 0-105 47.101562-105 105v45h-60v120h60v122h-137c-24.8125 0-45-20.1875-45-45zm0 0"
+                        />
+                    </svg>
+                </a>
+                <a class="youtube-link" href="#">
+                    <svg
+                            viewBox="0 -62 512.00199 512"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                                d="m334.808594 170.992188-113.113282-61.890626c-6.503906-3.558593-14.191406-3.425781-20.566406.351563-6.378906 3.78125-10.183594 10.460937-10.183594 17.875v122.71875c0 7.378906 3.78125 14.046875 10.117188 17.832031 3.308594 1.976563 6.976562 2.96875 10.652344 2.96875 3.367187 0 6.742187-.832031 9.847656-2.503906l113.117188-60.824219c6.714843-3.613281 10.90625-10.59375 10.9375-18.222656.027343-7.628906-4.113282-14.640625-10.808594-18.304687zm-113.859375 63.617187v-91.71875l84.539062 46.257813zm0 0"
+                        />
+                        <path
+                                d="m508.234375 91.527344-.023437-.234375c-.433594-4.121094-4.75-40.777344-22.570313-59.421875-20.597656-21.929688-43.949219-24.59375-55.179687-25.871094-.929688-.105469-1.78125-.203125-2.542969-.304688l-.894531-.09375c-67.6875-4.921874-169.910157-5.5937495-170.933594-5.59765575l-.089844-.00390625-.089844.00390625c-1.023437.00390625-103.246094.67578175-171.542968 5.59765575l-.902344.09375c-.726563.097657-1.527344.1875-2.398438.289063-11.101562 1.28125-34.203125 3.949219-54.859375 26.671875-16.972656 18.445312-21.878906 54.316406-22.382812 58.347656l-.058594.523438c-.152344 1.714844-3.765625 42.539062-3.765625 83.523437v38.3125c0 40.984375 3.613281 81.808594 3.765625 83.527344l.027344.257813c.433593 4.054687 4.746093 40.039062 22.484375 58.691406 19.367187 21.195312 43.855468 24 57.027344 25.507812 2.082031.238282 3.875.441406 5.097656.65625l1.183594.164063c39.082031 3.71875 161.617187 5.550781 166.8125 5.625l.15625.003906.15625-.003906c1.023437-.003907 103.242187-.675781 170.929687-5.597657l.894531-.09375c.855469-.113281 1.816406-.214843 2.871094-.324218 11.039062-1.171875 34.015625-3.605469 54.386719-26.019532 16.972656-18.449218 21.882812-54.320312 22.382812-58.347656l.058594-.523437c.152344-1.71875 3.769531-42.539063 3.769531-83.523438v-38.3125c-.003906-40.984375-3.617187-81.804687-3.769531-83.523437zm-26.238281 121.835937c0 37.933594-3.3125 77-3.625 80.585938-1.273438 9.878906-6.449219 32.574219-14.71875 41.5625-12.75 14.027343-25.847656 15.417969-35.410156 16.429687-1.15625.121094-2.226563.238282-3.195313.359375-65.46875 4.734375-163.832031 5.460938-168.363281 5.488281-5.082032-.074218-125.824219-1.921874-163.714844-5.441406-1.941406-.316406-4.039062-.558594-6.25-.808594-11.214844-1.285156-26.566406-3.042968-38.371094-16.027343l-.277344-.296875c-8.125-8.464844-13.152343-29.6875-14.429687-41.148438-.238281-2.710937-3.636719-42.238281-3.636719-80.703125v-38.3125c0-37.890625 3.304688-76.914062 3.625-80.574219 1.519532-11.636718 6.792969-32.957031 14.71875-41.574218 13.140625-14.453125 26.996094-16.054688 36.160156-17.113282.875-.101562 1.691407-.195312 2.445313-.292968 66.421875-4.757813 165.492187-5.464844 169.046875-5.492188 3.554688.023438 102.589844.734375 168.421875 5.492188.808594.101562 1.691406.203125 2.640625.3125 9.425781 1.074218 23.671875 2.699218 36.746094 16.644531l.121094.128906c8.125 8.464844 13.152343 30.058594 14.429687 41.75.226563 2.558594 3.636719 42.171875 3.636719 80.71875zm0 0"
+                        />
+                    </svg>
+                </a>
+                <a class="instagram-link" href="#">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="m75 512h362c41.355469 0 75-33.644531 75-75v-362c0-41.355469-33.644531-75-75-75h-362c-41.355469 0-75 33.644531-75 75v362c0 41.355469 33.644531 75 75 75zm-45-437c0-24.8125 20.1875-45 45-45h362c24.8125 0 45 20.1875 45 45v362c0 24.8125-20.1875 45-45 45h-362c-24.8125 0-45-20.1875-45-45zm0 0"
+                        />
+                        <path
+                                d="m256 391c74.4375 0 135-60.5625 135-135s-60.5625-135-135-135-135 60.5625-135 135 60.5625 135 135 135zm0-240c57.898438 0 105 47.101562 105 105s-47.101562 105-105 105-105-47.101562-105-105 47.101562-105 105-105zm0 0"
+                        />
+                        <path
+                                d="m406 151c24.8125 0 45-20.1875 45-45s-20.1875-45-45-45-45 20.1875-45 45 20.1875 45 45 45zm0-60c8.269531 0 15 6.730469 15 15s-6.730469 15-15 15-15-6.730469-15-15 6.730469-15 15-15zm0 0"
+                        />
+                    </svg>
+                </a>
+            </div>
+            <button> СКАЧАТЬ WHITEPAPER </button>
+        </div>
     </div>
     <header id="header" class="header-wrapper section ">
         <div class="header col-xl-10  ">
@@ -87,6 +143,7 @@
                     <a class="dropdown-item" href="#">ENG</a>
                 </div>
             </div>
+
         </div>
         <div class="container ">
             <div class="header-content col-xl-12 col-lg-10   col-md-8 ">
@@ -269,14 +326,31 @@
         </div>
     </header>
     <main>
-        <section id="me" class="why-me-wrapper section white-div">
+        <section id="me" class="why-me-wrapper section white-div" data-offset="100">
             <div class="container">
                 <h2 col-xl-6>почему выбирают меня</h2>
                 <div class="content row">
-                    <div class="content__img col-12 col-xl-3 col-lg-3">
-                        <img src="images/iPhone_X_Mockup.png" alt=""/>
+                    <div class="content__img col-12 col-xl-3 offset-xl-1 col-lg-3">
+                        <div class="slider-phone__border">
+                            <img src="images/Black%20iPhone%20X.png" alt=""/>
+                        </div>
+                        <div class="slider-phone">
+                            <div class="slider-phone__card">
+                                <img src="images/(Voice%20call)%20Answer%20the%20call.png" alt="..."/>
+                            </div>
+
+                            <div class="slider-phone__card">
+                                <img src="images/(Send%20money)%20Money%20transfer.png" alt="..."/>
+                            </div>
+                            <div class="slider-phone__card">
+                                <img src="images/(Group)%20(feature)%20Chat%20message.png" alt="..."/>
+                            </div>
+                            <div class="slider-phone__card">
+                                <img src="images/(Create%20a%20new%20message)%20(feature)%20Chat%20message.png" alt="..."/>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content__list col-12 col-xl-7 col-lg-5 col-md-4 offset-lg-2">
+                    <div class="content__list col-12 col-xl-6 col-lg-5 col-md-4 offset-lg-2">
                         <div class="advantages">
                             <h3>АУДИО И ВИДЕО ЗВОНКИ</h3>
                             <p>
@@ -1985,6 +2059,9 @@
                             помогут вам в принятии правильного решения.</p>
                     </div>
                     <div class="my-team__image col-lg-5 offset-lg-0">
+                        <div class="my-team__image-circle-mob">
+                            <img src="images/Группа_11.png" alt="..."/>
+                        </div>
                         <div class="my-team__image-circle-1">
 
                             <div class="my-team__image-circle-2">
@@ -2076,7 +2153,7 @@
                                             <div class="my-team__image-circle-percent circle-percent-1 ">
                                                 7%
                                             </div>
-                                            <svg class="percent-line-1" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            <svg id="my-svg" class="percent-line-1" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                                  xmlns:xlink="http://www.w3.org/1999/xlink"
                                                  preserveAspectRatio="xMidYMid meet" viewBox="0 0 57 41" width="57"
                                                  height="41" style="">
@@ -2088,9 +2165,10 @@
                                                     <g>
                                                         <g>
                                                             <g>
-                                                                <use xlink:href="#at6SaKkQn" opacity="1"
-                                                                     fill-opacity="0" stroke="#f89d04" stroke-width="2"
-                                                                     stroke-opacity="1"></use>
+                                                                <path  opacity="1"
+                                                                       fill-opacity="0" stroke="#f89d04" stroke-width="2"
+                                                                       stroke-opacity="1" d="M55.94 28.45L55.99 25.97L55.85 21.78C55.83 21.01 55.82 20.53 55.81 20.34C55.78 19.06 55.64 17.78 55.4 16.51C55.33 16.11 55.57 17.41 55.53 17.16C55.2 15.42 54.56 13.74 53.63 12.23C53.46 11.97 53.06 11.31 52.41 10.25L49.33 6.83C47.49 5.38 46.34 4.47 45.88 4.1C44.76 3.21 43.46 2.56 42.08 2.19C41.7 2.08 42.5 2.3 42.08 2.19C40.83 1.84 39.54 1.67 38.24 1.67C37.79 1.67 36.66 1.67 34.86 1.67C31.63 1.85 29.62 1.95 28.81 2C28.38 2.02 27.95 2.09 27.53 2.2C26.91 2.37 27.65 2.17 27.53 2.2C25.49 2.75 23.53 3.57 21.7 4.64C21.42 4.81 22.25 4.32 21.7 4.64C20.76 5.19 19.86 5.82 19.02 6.52C18.71 6.77 17.92 7.42 16.67 8.46L13.59 11.81C13.35 12.14 13.2 12.34 13.14 12.42C11.7 14.39 10.45 16.48 9.41 18.68C9.3 18.9 10.16 17.09 9.96 17.52C9.25 19.02 8.66 20.57 8.21 22.16C8.04 22.74 7.64 24.17 6.99 26.46L5.1 37.31L11.42 28.45L5.36 37.16L1.01 30.75"
+                                                                      id="at6SaKkQn" class="XQVjczCT_0"></path>
                                                             </g>
                                                         </g>
                                                     </g>
@@ -2129,17 +2207,14 @@
                                                  xmlns:xlink="http://www.w3.org/1999/xlink"
                                                  preserveAspectRatio="xMidYMid meet" viewBox="0 0 91 64" width="91"
                                                  height="64" style="">
-                                                <defs>
-                                                    <path d="M89.65 63.7L89.65 59.12L89.93 52.56L89.45 44.35C89.45 44.35 89.45 44.35 89.45 44.35C89.12 39.53 88.44 34.73 87.42 30C87.4 29.89 87.34 29.63 87.25 29.2C86.91 28.14 86.7 27.47 86.62 27.21C85.31 23.08 83.64 19.08 81.63 15.24C81.41 14.83 82.23 16.39 81.63 15.24C80.91 13.87 80.03 12.6 78.99 11.46C78.18 10.57 77.73 10.07 77.03 9.3C75.65 7.78 74.07 6.44 72.34 5.34C71.36 4.71 70.9 4.41 69.89 3.76C68.28 2.74 66.48 2.05 64.59 1.74C63.43 1.56 65.17 1.84 64.59 1.74C60.72 1.12 56.78 0.94 52.86 1.21C51.46 1.31 54.04 1.13 52.86 1.21C48.2 1.54 43.57 2.28 39.04 3.43C38.79 3.49 38.16 3.65 37.15 3.9L30.35 6.4C28.35 7.43 27.11 8.07 26.61 8.33C24.18 9.58 21.87 11.06 19.73 12.76C18.62 13.65 20.38 12.25 19.73 12.76C16.03 15.71 12.8 19.19 10.14 23.1C9.36 24.24 10.94 21.92 10.14 23.1C7.56 26.89 5.36 30.93 3.58 35.16C3.23 35.99 2.35 38.08 0.95 41.4"
-                                                          id="bu5TSoBBk" class="liDoaHSp_0"></path>
-                                                </defs>
                                                 <g>
                                                     <g>
                                                         <g>
                                                             <g>
-                                                                <use xlink:href="#bu5TSoBBk" opacity="1"
-                                                                     fill-opacity="0" stroke="#e98e0c" stroke-width="2"
-                                                                     stroke-opacity="1"></use>
+                                                                <path opacity="1"
+                                                                      fill-opacity="0" stroke="#e98e0c" stroke-width="2"
+                                                                      stroke-opacity="1" d="M89.65 63.7L89.65 59.12L89.93 52.56L89.45 44.35C89.45 44.35 89.45 44.35 89.45 44.35C89.12 39.53 88.44 34.73 87.42 30C87.4 29.89 87.34 29.63 87.25 29.2C86.91 28.14 86.7 27.47 86.62 27.21C85.31 23.08 83.64 19.08 81.63 15.24C81.41 14.83 82.23 16.39 81.63 15.24C80.91 13.87 80.03 12.6 78.99 11.46C78.18 10.57 77.73 10.07 77.03 9.3C75.65 7.78 74.07 6.44 72.34 5.34C71.36 4.71 70.9 4.41 69.89 3.76C68.28 2.74 66.48 2.05 64.59 1.74C63.43 1.56 65.17 1.84 64.59 1.74C60.72 1.12 56.78 0.94 52.86 1.21C51.46 1.31 54.04 1.13 52.86 1.21C48.2 1.54 43.57 2.28 39.04 3.43C38.79 3.49 38.16 3.65 37.15 3.9L30.35 6.4C28.35 7.43 27.11 8.07 26.61 8.33C24.18 9.58 21.87 11.06 19.73 12.76C18.62 13.65 20.38 12.25 19.73 12.76C16.03 15.71 12.8 19.19 10.14 23.1C9.36 24.24 10.94 21.92 10.14 23.1C7.56 26.89 5.36 30.93 3.58 35.16C3.23 35.99 2.35 38.08 0.95 41.4"
+                                                                      id="bu5TSoBBk" class="liDoaHSp_0"></path>
                                                             </g>
                                                         </g>
                                                     </g>
@@ -2151,6 +2226,21 @@
                                                 }
 
                                                 @keyframes liDoaHSp_draw {
+                                                    0%{
+                                                        stroke-dashoffset: 162;
+                                                }
+                                                    30%{
+                                                        stroke-dashoffset: 162;
+                                                    }
+                                                    40% {
+                                                        stroke-dashoffset: 100;
+                                                    }
+                                                    50%{
+                                                        stroke-dashoffset: 100;
+                                                    }
+                                                    60%{
+                                                        stroke-dashoffset: 0;
+                                                    }
                                                     100% {
                                                         stroke-dashoffset: 0;
                                                     }
@@ -2166,20 +2256,15 @@
                                             <svg class="percent-line-3" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                                  xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"
                                                  viewBox="0 0 105 105" width="105" height="105" style="">
-                                                <defs>
-                                                    <path d="M16.58 0.5L119.5 0.5L119.5 139.5L16.58 139.5L16.58 0.5Z"
-                                                          id="a3OP2eCZCs" class="jFmsifzw_0"></path>
-                                                    <path d="M102.48 103.5L102.48 63.94L101.24 46.05C100.63 40.6 99.96 36.23 99.23 32.93C98.14 27.97 97.85 27.38 97.47 26.24C97.09 25.1 96.74 24 96.33 23.11C95.41 21.08 95.43 21.18 93.84 18.42C92.26 15.65 91.46 13.96 89.17 10.97C86.03 6.87 84.24 4.74 80.76 3.5C79.3 2.98 73.83 1.25 71.47 1.26C67.85 1.27 60.09 1.46 48.19 1.82C24.81 2.53 5.18 19.61 1.23 42.66C1.23 42.66 1.23 42.66 1.23 42.66"
-                                                          id="cszgiYsi7" class="jFmsifzw_1"></path>
-                                                </defs>
                                                 <g>
                                                     <g>
                                                         <g></g>
                                                         <g>
                                                             <g>
-                                                                <use xlink:href="#cszgiYsi7" opacity="1"
-                                                                     fill-opacity="0" stroke="#fba10a" stroke-width="2"
-                                                                     stroke-opacity="1"></use>
+                                                                <path opacity="1"
+                                                                      fill-opacity="0" stroke="#fba10a" stroke-width="2"
+                                                                      stroke-opacity="1" d="M102.48 103.5L102.48 63.94L101.24 46.05C100.63 40.6 99.96 36.23 99.23 32.93C98.14 27.97 97.85 27.38 97.47 26.24C97.09 25.1 96.74 24 96.33 23.11C95.41 21.08 95.43 21.18 93.84 18.42C92.26 15.65 91.46 13.96 89.17 10.97C86.03 6.87 84.24 4.74 80.76 3.5C79.3 2.98 73.83 1.25 71.47 1.26C67.85 1.27 60.09 1.46 48.19 1.82C24.81 2.53 5.18 19.61 1.23 42.66C1.23 42.66 1.23 42.66 1.23 42.66"
+                                                                      id="cszgiYsi7" class="jFmsifzw_1"></path>
                                                             </g>
                                                         </g>
                                                     </g>
@@ -2202,10 +2287,10 @@
                                                         stroke-dashoffset: 207;
                                                     }
                                                     70%{
-                                                        stroke-dashoffset: 80;
+                                                        stroke-dashoffset: 90;
                                                     }
                                                     80%{
-                                                        stroke-dashoffset: 80;
+                                                        stroke-dashoffset: 90;
                                                     }
                                                     90%{
                                                         stroke-dashoffset: 0;
@@ -2799,5 +2884,19 @@
 
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+<script>
+
+    // new Vivus('my-svg', {
+    //     duration: 200,
+    //     forceRender: /^((?!chrome|android).)*(msie|edge|trident|safari)/i.test(window.navigator.userAgent)
+    // }, myVivus => {
+    //     if (myVivus.getStatus() === 'end') {
+    //        setTimeout(function () {
+    //            myVivus.reset().play();
+    //        },5000)
+    //     }
+    // });
+</script>
 </body>
 </html>

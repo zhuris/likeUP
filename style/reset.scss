@@ -1,5 +1,6 @@
 a {
   text-decoration: none;
+  outline: none;
   &:hover{
     text-decoration: none;
   }
@@ -17,6 +18,9 @@ input {
   border: none;
   outline: none;
   cursor: pointer;
+  &:active{
+    outline: none;
+  }
 }
 li {
   list-style: none;
