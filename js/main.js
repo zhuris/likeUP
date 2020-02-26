@@ -1,11 +1,18 @@
 $(document).ready(function(){
 
-
     $('main').scrollspy({
         target: '#menu',
         offset: 100,
     });
+    //number musk
 
+    $('[name=phone]').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9\+]/g)) {
+            this.value = this.value.replace(/[^0-9\+]/g, '');
+        }
+    });
+
+//scroll mobile
     $(window).scroll(function(){
         if($(this).scrollTop()>10) {
             $("#menu-mob").addClass("active-scroll");
@@ -73,9 +80,6 @@ $(document).ready(function(){
                     dots: false
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
 });
 
@@ -148,7 +152,71 @@ $(document).ready(function(){
     $('.menu-mob__links-item').click(function(){
         divId = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(divId).offset().top - 50
+            scrollTop: $(divId).offset().top - 60
         }, 100);
     });
+
+    //increment animations
+
+    setTimeout(function() {
+        counter1();
+    }, 1000);
+
+    setTimeout(function() {
+        const interval = setInterval(counter1, 10000);
+    }, 1000);
+    function counter1 () {
+        $({counter: 0}).animate({counter: 7}, {
+            duration: 1000,
+            easing: 'linear',
+            step: function () {
+                $('.counter1').text(Math.ceil(this.counter))
+            },
+            complete: function () {
+            }
+        });
+    }
+
+    setTimeout(function() {
+        counter2();
+    }, 4000);
+
+    setTimeout(function() {
+        const interval = setInterval(counter2, 10000);
+    }, 4000);
+    function counter2 () {
+        $({counter: 0}).animate({counter: 4}, {
+            duration: 1000,
+            easing: 'linear',
+            step: function () {
+                $('.counter2').text(Math.ceil(this.counter))
+            },
+            complete: function () {
+            }
+        });
+    }
+
+    setTimeout(function() {
+        counter3();
+    }, 7000);
+
+    setTimeout(function() {
+        const interval = setInterval(counter3, 10000);
+    }, 7000);
+    function counter3 () {
+        $({counter: 0}).animate({counter: 2}, {
+            duration: 1000,
+            easing: 'linear',
+            step: function () {
+                $('.counter3').text(Math.ceil(this.counter))
+            },
+            complete: function () {
+            }
+        });
+    }
+
+
+
+
 });
+

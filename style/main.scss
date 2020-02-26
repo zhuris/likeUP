@@ -1,12 +1,6 @@
 @import "reset";
 @import "font";
 
-//section:before {
-//  height: 54px;
-//  content: "";
-//  display:block;
-//}
-
 @mixin h2-desktop {
   color: #ffffff;
   font-size: 30px;
@@ -208,21 +202,27 @@ body {
   .menu-mob .menu-mob__links{
     display: none;
     height: 100%;
-    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
     button {
       border: 1px solid #fb9a50;
       border-radius: 7px;
       color: white;
       font-size: 10px;
-      padding: 2px 5px ;
+      padding: 2px 10px 2px 5px;
+      width: auto;
+      margin: 0 auto;
     }
 
+
     .header__lang {
+      position: absolute;
+      top: 10px;
+      left: 10px;
       .menu-mob__lang-btn{
         position: absolute;
-        top: -20px;
-        left: -20px;
-        margin-left: 30px;
+        //top: -75px;
+        //left: -20px;
         cursor: pointer;
         outline: none;
         border: none;
@@ -234,12 +234,11 @@ body {
         }
       }
       .dropdown-menu-mob{
-        //left: -50% !important;
         min-width: auto;
         background: transparent;
         border: none;
         .dropdown-item{
-          color: #fb9a50;
+          color: white;
           font-size: 14px;
           outline: none;
           padding: 2px 7px;
@@ -258,7 +257,7 @@ body {
   }
 
   .menu-mob.menu-mob_state_open .menu-mob__links {
-    display: block;
+    display: flex;
 
   }
 
@@ -327,12 +326,10 @@ body {
     .header {
       display: flex;
       width: 100%;
-      //padding: 0 150px;
       justify-content: center;
 
       .header__logo {
         margin-right: auto;
-
         a {
           width: 145px;
           height: 50px;
@@ -343,15 +340,12 @@ body {
           }
         }
       }
-
       .header__link {
         display: flex;
-
         a {
           margin-right: 32px;
           outline: none;
         }
-
         a.facebook-link {
           svg {
             width: 20px;
@@ -411,9 +405,10 @@ body {
           background: transparent;
           border: none;
           .dropdown-item{
-            color: #fb9a50;
+            color: white;
             font-size: 14px;
             outline: none;
+            padding: 0;
             &:hover{
               background: transparent;
               border: none;
@@ -573,7 +568,8 @@ body {
     .popup {
       position: fixed;
       justify-content: center;
-      bottom: 33%;
+      top: 50%;
+      transform: translateY(-50%);
       left: 50%;
       width: 485px;
       margin-left: -200px;
@@ -717,7 +713,6 @@ body {
       width: 100%;
       display: flex;
       align-items: center;
-      //max-width: 1240px;
       margin: 0 auto;
       padding: 11rem 0 18rem;
       justify-content: space-between;
@@ -857,10 +852,18 @@ animation: point-sub-4 5s ease both ;
       .my-team__content {
         h2 {
           @include h2-desktop();
-          margin-bottom: 120px;
+          margin-bottom: 5rem;
         }
         p {
         @include p-desktop();
+          margin-bottom: 5rem;
+        }
+        button {
+          border-radius: 7px;
+          background-color: #fb9a50;
+          color: white;
+          padding: 15px 30px;
+          text-transform: uppercase;
         }
       }
       .my-team__image {
@@ -1048,9 +1051,7 @@ animation: point-sub-4 5s ease both ;
         }
       }
     }
-
   }
-
   .my-creators-wrapper {
     width: auto;
     height: auto;
@@ -1060,15 +1061,11 @@ animation: point-sub-4 5s ease both ;
     background-color: #ffffff;
     position: relative;
     z-index: 1;
-
     h2{
-
       @include h2-desktop();
       margin-bottom: 3rem;
       color: #11306d;
     }
-
-
     .slick-prev {
       border-radius: 50%;
       height: 38px;
@@ -1080,17 +1077,14 @@ animation: point-sub-4 5s ease both ;
       top: calc(100% + 60px);
       left: 43%;
       padding-right: 4px;
-
       &:before {
         content: "";
       }
-
       svg {
         width: 12px;
         height: 24px;
       }
     }
-
     .slick-next {
       border-radius: 50%;
       height: 38px;
@@ -1112,7 +1106,6 @@ animation: point-sub-4 5s ease both ;
         height: 24px;
       }
     }
-
     .main-slider {
       max-width: 1600px;
       margin: 0 auto;
@@ -1184,7 +1177,7 @@ animation: point-sub-4 5s ease both ;
             height: 100%;
             transition: .3s ease;
             position: absolute;
-            top: 21rem;
+            top: 20.5rem;
             z-index: 12;
             overflow: hidden;
 
@@ -1300,7 +1293,6 @@ animation: point-sub-4 5s ease both ;
         }
 
         .contact {
-          //margin-right: 30px;
 
           h2 {
             @include h2-desktop();
@@ -1425,7 +1417,6 @@ animation: point-sub-4 5s ease both ;
   animation: draw 10s linear reverse infinite;
   fill: none;
   stroke: #11306d;
-  /* stroke-miterlimit:10;  */
   stroke-width: 4px;
 }
 
@@ -1529,64 +1520,16 @@ animation: point-sub-4 5s ease both ;
     .container {
     }
     //modal
-    .popup-fade {
-      display: none;
-    }
-    .popup-fade:before {
-      content: "";
-      background: #000;
-      position: fixed;
-      left: 0;
-      top: 0;
+    .popup {
       width: 100%;
       height: 100%;
-      opacity: 0.7;
-      z-index: 9999;
-    }
-
-    .popup {
-      position: fixed;
-      justify-content: center;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      background: #fff;
-      border: 1px solid orange;
-      border-radius: 4px;
-      z-index: 99999;
-      opacity: 1;
       left: 0;
       margin: 0;
-      padding: 90px 30px 45px 30px;
     }
-
-    .popup-close {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-
-      svg {
-        width: 20px;
-        height: 20px;
-        fill: #11306d;
-      }
-    }
-
     .modals-form {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
       input {
-        height: 30px;
-        border-bottom: 1px solid #fb9a50;
         width: auto;
-        margin-bottom: 28px;
-        color: #11306d;
-
         &::placeholder {
-          color: #fb9a50;
           font-size: 12px;
         }
       }
@@ -1601,32 +1544,6 @@ animation: point-sub-4 5s ease both ;
       }
     }
 
-    //background-image: url(../images/3block-min.png);
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 500px;
-    margin-top: -32rem;
-    position: relative;
-
-    &:after {
-      content: "";
-      top: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      z-index: 0;
-      position: absolute;
-      background-image: linear-gradient(
-                      to right,
-                      rgba(48, 87, 165, 0.88) 0%,
-                      rgba(48, 87, 165, 0.88) 19%,
-                      rgba(17, 48, 109, 0.88) 79%,
-                      rgba(17, 48, 109, 0.88) 89%
-      );
-      opacity: 0.9;
-    }
-
     h2 {
       @include h2-mobile();
       margin: 3.5rem 0 2rem 0;
@@ -1635,10 +1552,8 @@ animation: point-sub-4 5s ease both ;
 
     .investments-wrapper-content {
       .row {
-
         .invest-advantages {
           margin-bottom: 1rem;
-
           h3 {
             color: #fb9a50;
             font-size: 12px;
@@ -1649,7 +1564,6 @@ animation: point-sub-4 5s ease both ;
               fill: #fb9a50;
             }
           }
-
           p {
             margin-top: 0;
             @include p-mobile();
@@ -1659,18 +1573,11 @@ animation: point-sub-4 5s ease both ;
     }
 
     .investments-wrapper__btn {
-
       margin-bottom: 40px;
-
       button {
-        border-radius: 7px;
-        background-color: #fb9a50;
-        color: white;
         font-size: 12px;
         padding: 6px 10px;
-        text-transform: uppercase;
         margin: 0;
-
       }
     }
   }
@@ -1678,15 +1585,7 @@ animation: point-sub-4 5s ease both ;
   // END investment container////////////////////////////////////////////////////////////
 
  .wrapper .investments-wrapper .my-way-wrapper {
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
     border-radius: 150px 0 0px;
-    background-color: #ffffff;
-
     h2 {
       @include h2-mobile();
       color: #11306d;
@@ -1984,6 +1883,7 @@ animation: point-sub-4 5s ease both ;
       padding:  0;
       .my-team__content {
         margin-bottom: 25px;
+        text-align: center;
         h2 {
           @include h2-mobile();
           text-align: center;
@@ -1991,6 +1891,12 @@ animation: point-sub-4 5s ease both ;
         }
         p {
           @include p-mobile();
+        }
+        button{
+
+          font-size: 12px;
+          padding: 6px 10px;
+          margin: 0;
         }
       }
       .my-team__image {
@@ -2396,7 +2302,6 @@ animation: point-sub-4 5s ease both ;
     .popup {
       position: fixed;
       justify-content: center;
-      top: 0;
       width: 100%;
       height: 100vh;
       background: #fff;
@@ -2777,7 +2682,7 @@ animation: point-sub-4 5s ease both ;
             padding: 15px 15px 60px 15px;
             width: 100%;
             height: 100%;
-            top: 75%;
+            top: 71%;
             p {
               @include p-desktop();
               color: #11306d;
@@ -2820,8 +2725,8 @@ animation: point-sub-4 5s ease both ;
     }
   }
   .wrapper .partners-wrapper .content .partner__image {
-    width: 270px;
-    height: 125px;
+    width: 230px;
+    height: 100px;
   }
   .wrapper .partners-wrapper .content .partner{
     height: 160px;
@@ -2836,6 +2741,7 @@ animation: point-sub-4 5s ease both ;
       padding:  0;
       .my-team__content {
         margin-bottom: 25px;
+        text-align: center;
         h2 {
           @include h2-mobile();
           font-size: 25px;
@@ -2844,6 +2750,10 @@ animation: point-sub-4 5s ease both ;
         }
         p {
           @include p-desktop();
+        }
+        button{
+          font-size: 16px;
+          padding: 6px 10px;
         }
       }
       .my-team__image {
@@ -3198,7 +3108,7 @@ animation: point-sub-4 5s ease both ;
 
 
 
-@media screen and (min-width: 1000px) and (max-width: 1640px) {
+@media screen and (min-width:1361px) and (max-width: 1640px) {
   .wrapper .my-creators-wrapper .main-slider{
     max-width: 1100px;
   }
@@ -3207,7 +3117,7 @@ animation: point-sub-4 5s ease both ;
     margin-left: 5rem;
   }
 }
-@media screen and  (min-width: 1000px)  and (max-width: 1360px) {
+@media screen and  (min-width: 1025px)  and (max-width: 1360px) {
   .wrapper .why-me-wrapper{
     border-radius: 0 0 250px;
   }
@@ -3228,11 +3138,31 @@ animation: point-sub-4 5s ease both ;
 
   .wrapper .why-me-wrapper .content__list .advantages p{
     max-width: 80%;
+    margin: 0;
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way{
     width: 80%;
   }
+  .wrapper .partners-wrapper .content{
+    max-width: 90%;
+    padding: 0 15px;
+  }
 }
+@media screen and  (min-width: 769px)  and (max-width: 1024px){
+  .wrapper .why-me-wrapper{
+    border-radius: 0 0 150px;
+  }
+  .wrapper .investments-wrapper .my-way-wrapper{
+    border-radius: 150px 0 0 ;
+  }
+  .wrapper .my-creators-wrapper{
+    border-radius: 0 0 150px;
+  }
+  .wrapper .investments-wrapper .my-way-wrapper h2{
+    margin-left: 2rem;
+  }
+}
+
 
 
 @keyframes draw {
