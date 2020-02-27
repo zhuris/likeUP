@@ -161,7 +161,8 @@ body {
   .menu-mob__links-social{
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
     a{
       margin-right: 10px ;
       svg {
@@ -479,7 +480,7 @@ body {
   }
 
   .why-me-wrapper {
-    padding: 65px 0 65px 0;
+    padding: 45px 0 65px 0;
     width: auto;
     box-shadow: 2px 5px 23px 1px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 436px;
@@ -528,13 +529,14 @@ body {
         .advantages {
           h3 {
             color: #fb9a50;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 16px;
           }
 
           p {
             margin-bottom: 45px;
             @include p-desktop();
+            line-height: 24px;
             color: #11306d;
 
           }
@@ -710,34 +712,37 @@ body {
     }
 
     .my-way {
-      width: 100%;
       display: flex;
-      align-items: center;
       margin: 0 auto;
-      padding: 11rem 0 18rem;
-      justify-content: space-between;
-
+      padding: 6rem 0 18rem;
+      &__point{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
       svg {
         margin-bottom: -45px;
       }
       &__road-wrapper{
         position: absolute;
-        width: 4px;
-        height: 340vh;
+        width: 100vw;
+        height: 4px;
         background: #11306d;
         z-index: -1;
         overflow: hidden;
-        transform: rotate(-90deg);
-        left: 50%;
+        /* transform: rotate(-90deg); */
+        /* left: 50%; */
         display: initial;
+        bottom: 52.5%;
       }
       &__road-container{
-        width: 4px;
-        height: 340vh;
+        width: 100vw;
+        height: 4px;
         background: #fb9a50;
         position: absolute;
-        top: -100%;
-        animation: road 5s linear infinite;
+        left: -100%;
+        animation: road 10s linear infinite;
       }
     }
 
@@ -781,39 +786,40 @@ body {
           color: #fb9a50;
           opacity: 0;
           position: absolute;
-          bottom: -50px;
-          left: 85px;
+          top: 61px;
+          left: 50%;
           text-align: center;
           width: 190px;
+          transform: translateX(-50%);
         }
         .title-1{
-          animation: point-sub-1 5s ease both;
+          animation: point-sub-1 10s ease infinite;
         }
         .title-2{
-animation: point-sub-2 5s ease both;
+animation: point-sub-2 10s ease infinite;
         }
         .title-3{
-animation: point-sub-3 5s ease both;
+animation: point-sub-3 10s ease infinite;
         }
         .title-4{
-animation: point-sub-4 5s ease both ;
+animation: point-sub-4 10s ease infinite ;
         }
 
       }
       .q1 .point__circle {
-        animation: point-q1 5s ease  infinite;
+        animation: point-q1 10s ease  infinite;
         border: 1px solid transparent;
       }
       .q2 .point__circle{
-        animation: point-q2 5s ease infinite;
+        animation: point-q2 10s ease infinite;
         border: 1px solid transparent;
       }
       .q3 .point__circle{
-        animation: point-q3 5s ease infinite;
+        animation: point-q3 10s ease infinite;
         border: 1px solid transparent;
       }
       .q4 .point__circle{
-        animation: point-q4 5s ease infinite;
+        animation: point-q4 10s ease infinite;
         border: 1px solid transparent;
       }
       .active {
@@ -1094,7 +1100,7 @@ animation: point-sub-4 5s ease both ;
       align-items: center;
       justify-content: center;
       top: calc(100% + 60px);
-      padding-left: 4px;
+      padding-left: 3px;
       right: 43%;
 
       &:before {
@@ -1527,6 +1533,13 @@ animation: point-sub-4 5s ease both ;
       margin: 0;
     }
     .modals-form {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
       input {
         width: auto;
         &::placeholder {
@@ -1540,7 +1553,8 @@ animation: point-sub-4 5s ease both ;
         background-color: #fb9a50;
         color: white;
         height: 47px;
-        margin-top: 45px;
+        margin-top: 20px;
+        padding: 0px 10px;
       }
     }
 
@@ -1591,52 +1605,37 @@ animation: point-sub-4 5s ease both ;
       color: #11306d;
       margin-bottom: 4rem;
     }
-
+   .my-way__point{
+     isplay: flex;
+     align-items: center;
+     height: 570px;
+     flex-direction: column;
+     padding: 2rem 0;
+   }
     .my-way {
       width: 100%;
-      display: flex;
-      align-items: center;
-      height: 570px;
-      flex-direction: column;
-      padding: 2rem 0;
-
-      svg {
-        margin-bottom: -45px;
-      }
-      //.container-mobile__wrapper{
-      //  width: 2px;
-      //  height: 570px;
-      //  overflow: hidden;
-      //  position: relative;
-      //  background: #11306d;
-      //
-      //  .container-mobile__road{
-      //    width: 2px;
-      //    height: 570px;
-      //    position: absolute;
-      //    background: #fb9a50;
-      //
-      //  }
-      //}
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
       &__road-wrapper{
         position: absolute;
-        width: 2px;
-        height: 570px;
+        width: 100vh;
+        height: 2px;
         background: #11306d;
         z-index: -1;
         overflow: hidden;
-        transform: rotate(0deg);
-        bottom: 0;
-
-
+        transform: rotate(90deg) translateX(-50%);
+        bottom: -35%;
       }
       &__road-container{
-        width: 2px;
-        height: 570px;
+        width: 180vw;
+        height: 4px;
         background: #fb9a50;
         position: absolute;
-        top: -100%;
-        animation: road 5s linear infinite ;
+        left: -100%;
+        right: 11px;
+        animation: road 5s linear infinite;
       }
     }
 
@@ -1662,15 +1661,6 @@ animation: point-sub-4 5s ease both ;
         box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
         color: #fb9a50;
         background-color: #ffffff;
-        //&:after {
-        //  content: '';
-        //  display: block;
-        //  position: absolute;
-        //  bottom: -60px;
-        //  border: 10px solid transparent;
-        //  border-top: 10px solid #fb9a50;
-        //
-        //}
       }
       .point__date{
         position: absolute;
@@ -1696,9 +1686,9 @@ animation: point-sub-4 5s ease both ;
         opacity: 0;
         position: absolute;
         top: 110%;
-        left: -45px;
+        left: 55px;
         text-align: center;
-        width: 110px;
+        width: 140px;
       }
       .title-1{
         animation: point-sub-1 5s ease both;
@@ -2432,68 +2422,44 @@ animation: point-sub-4 5s ease both ;
 
   // END investment container////////////////////////////////////////////////////////////
 
- .wrapper .investments-wrapper .my-way-wrapper {
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-    box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.25);
+  .wrapper .investments-wrapper .my-way-wrapper {
     border-radius: 150px 0 0px;
-    background-color: #ffffff;
-
     h2 {
       @include h2-mobile();
-      font-size: 25px;
       color: #11306d;
       margin-bottom: 4rem;
     }
-
-    .my-way {
-      width: 100%;
-      display: flex;
+    .my-way__point{
+      isplay: flex;
       align-items: center;
       height: 570px;
       flex-direction: column;
       padding: 2rem 0;
-
-      svg {
-        margin-bottom: -45px;
-      }
-      //.container-mobile__wrapper{
-      //  width: 2px;
-      //  height: 570px;
-      //  overflow: hidden;
-      //  position: relative;
-      //  background: #11306d;
-      //
-      //  .container-mobile__road{
-      //    width: 2px;
-      //    height: 570px;
-      //    position: absolute;
-      //    background: #fb9a50;
-      //
-      //  }
-      //}
+    }
+    .my-way {
+      width: 100%;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
       &__road-wrapper{
         position: absolute;
-        width: 2px;
-        height: 570px;
+        width: 100vh;
+        height: 2px;
         background: #11306d;
         z-index: -1;
         overflow: hidden;
-        transform: rotate(0deg);
-        bottom: 0;
-
-
+        transform: rotate(90deg) translateX(-50%);
+        bottom: -35%;
       }
       &__road-container{
-        width: 2px;
-        height: 570px;
+        width: 180vw;
+        height: 4px;
         background: #fb9a50;
         position: absolute;
-        top: -100%;
-        animation: road 5s linear infinite ;
+        left: -100%;
+        right: 11px;
+        animation: road 5s linear infinite;
       }
     }
 
@@ -2519,15 +2485,6 @@ animation: point-sub-4 5s ease both ;
         box-shadow: 2px 5px 9px 1px rgba(0, 0, 0, 0.2);
         color: #fb9a50;
         background-color: #ffffff;
-        //&:after {
-        //  content: '';
-        //  display: block;
-        //  position: absolute;
-        //  bottom: -60px;
-        //  border: 10px solid transparent;
-        //  border-top: 10px solid #fb9a50;
-        //
-        //}
       }
       .point__date{
         position: absolute;
@@ -2553,9 +2510,9 @@ animation: point-sub-4 5s ease both ;
         opacity: 0;
         position: absolute;
         top: 110%;
-        left: -45px;
+        left: 55px;
         text-align: center;
-        width: 110px;
+        width: 140px;
       }
       .title-1{
         animation: point-sub-1 5s ease both;
@@ -3117,7 +3074,16 @@ animation: point-sub-4 5s ease both ;
     margin-left: 5rem;
   }
 }
-@media screen and  (min-width: 1025px)  and (max-width: 1360px) {
+@media screen and  (min-width: 1025px)  and (max-width: 1367px) {
+
+  .wrapper .investments-wrapper .my-way-wrapper .my-way__point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .wrapper .why-me-wrapper{
     border-radius: 0 0 250px;
   }
@@ -3137,11 +3103,18 @@ animation: point-sub-4 5s ease both ;
   }
 
   .wrapper .why-me-wrapper .content__list .advantages p{
-    max-width: 80%;
+    //max-width: 80%;
     margin: 0;
   }
+  .wrapper .why-me-wrapper .content__list .advantages {
+    max-width: 85%;
+    margin-bottom: 1rem;
+  }
   .wrapper .investments-wrapper .my-way-wrapper .my-way{
-    width: 80%;
+    //width: 80%;
+  }
+  .wrapper .investments-wrapper .my-way-wrapper h2{
+    margin-left: 5rem;
   }
   .wrapper .partners-wrapper .content{
     max-width: 90%;
@@ -3160,6 +3133,13 @@ animation: point-sub-4 5s ease both ;
   }
   .wrapper .investments-wrapper .my-way-wrapper h2{
     margin-left: 2rem;
+  }
+  .wrapper .investments-wrapper .my-way-wrapper .my-way__point {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto;
   }
 }
 
@@ -3185,11 +3165,11 @@ animation: point-sub-4 5s ease both ;
 }
 @keyframes road {
   from {
-    top: -100%;
+    left: -100%;
 
   }
   to{
-    top: 0%;
+    left: 0%;
   }
   
 }
@@ -3197,82 +3177,68 @@ animation: point-sub-4 5s ease both ;
   0%{
     border-color: transparent;
   }
-  12%{
+  19%{
     border-color: transparent;
   }
-  13%{
-    border-color: #fb9a50;
-  }
-  99%{
+20%{
     border-color: #fb9a50;
   }
   100%{
-
+    border-color: #fb9a50;
   }
 }
 @keyframes point-q2 {
   0%{
     border-color: transparent;
   }
-  24%{
+  39%{
     border-color: transparent;
   }
-  25%{
+  40%{
     border-color: #fb9a50;
   }
-  99%{
-    border-color: #fb9a50;
-  }
-  100%{
 
+  100%{
+    border-color: #fb9a50;
   }
 }
 @keyframes point-q3 {
   0%{
     border-color: transparent;
   }
-  49%{
+  59%{
     border-color: transparent;
   }
-  50%{
-    border-color: #fb9a50;
-  }
-  99%{
+  60%{
     border-color: #fb9a50;
   }
   100%{
-
+    border-color: #fb9a50;
   }
 }
 @keyframes point-q4 {
   0%{
     border-color: transparent;
   }
-  74%{
+  79%{
     border-color: transparent;
   }
-  75%{
-    border-color: #fb9a50;
-  }
-  99%{
+  80%{
     border-color: #fb9a50;
   }
   100%{
-
+    border-color: #fb9a50;
   }
 }
 @keyframes point-sub-1 {
   0%{
     opacity: 0;
   }
-  12%{
+  19%{
     opacity: 0;
   }
-  13%{
+  20%{
     opacity: 1;
-  }
-  99%{
-    opacity:1 ;
   }
   100%{
     opacity: 1;
@@ -3282,14 +3248,11 @@ animation: point-sub-4 5s ease both ;
   0%{
     opacity: 0;
   }
-  24%{
+  39%{
     opacity:0 ;
   }
-  25%{
+  40%{
     opacity: 1;
-  }
-  99%{
-    opacity:1 ;
   }
   100%{
 opacity: 1 ;
@@ -3299,14 +3262,11 @@ opacity: 1 ;
   0%{
     opacity: 0;
   }
-  49%{
+  59%{
     opacity: 0;
   }
-  50%{
+  60%{
     opacity: 1;
-  }
-  99%{
-    opacity:1 ;
   }
   100%{
 opacity:1 ;
@@ -3316,13 +3276,10 @@ opacity:1 ;
   0%{
     opacity: 0;
   }
-  74%{
+  79%{
     opacity: 0;
   }
-  75%{
-    opacity: 1;
-  }
-  99%{
+  80%{
     opacity: 1;
   }
   100%{

@@ -158,62 +158,62 @@ $(document).ready(function(){
 
     //increment animations
 
-    setTimeout(function() {
-        counter1();
-    }, 1000);
-
-    setTimeout(function() {
-        const interval = setInterval(counter1, 10000);
-    }, 1000);
-    function counter1 () {
-        $({counter: 0}).animate({counter: 7}, {
-            duration: 1000,
-            easing: 'linear',
-            step: function () {
-                $('.counter1').text(Math.ceil(this.counter))
-            },
-            complete: function () {
-            }
-        });
-    }
-
-    setTimeout(function() {
-        counter2();
-    }, 4000);
-
-    setTimeout(function() {
-        const interval = setInterval(counter2, 10000);
-    }, 4000);
-    function counter2 () {
-        $({counter: 0}).animate({counter: 4}, {
-            duration: 1000,
-            easing: 'linear',
-            step: function () {
-                $('.counter2').text(Math.ceil(this.counter))
-            },
-            complete: function () {
-            }
-        });
-    }
-
-    setTimeout(function() {
-        counter3();
-    }, 7000);
-
-    setTimeout(function() {
-        const interval = setInterval(counter3, 10000);
-    }, 7000);
-    function counter3 () {
-        $({counter: 0}).animate({counter: 2}, {
-            duration: 1000,
-            easing: 'linear',
-            step: function () {
-                $('.counter3').text(Math.ceil(this.counter))
-            },
-            complete: function () {
-            }
-        });
-    }
+    // setTimeout(function() {
+    //     counter1();
+    // }, 1000);
+    //
+    // setTimeout(function() {
+    //     const interval = setInterval(counter1, 10000);
+    // }, 1000);
+    // function counter1 () {
+    //     $({counter: 0}).animate({counter: 7}, {
+    //         duration: 1000,
+    //         easing: 'linear',
+    //         step: function () {
+    //             $('.counter1').text(Math.ceil(this.counter))
+    //         },
+    //         complete: function () {
+    //         }
+    //     });
+    // }
+    //
+    // setTimeout(function() {
+    //     counter2();
+    // }, 4000);
+    //
+    // setTimeout(function() {
+    //     const interval = setInterval(counter2, 10000);
+    // }, 4000);
+    // function counter2 () {
+    //     $({counter: 0}).animate({counter: 4}, {
+    //         duration: 1000,
+    //         easing: 'linear',
+    //         step: function () {
+    //             $('.counter2').text(Math.ceil(this.counter))
+    //         },
+    //         complete: function () {
+    //         }
+    //     });
+    // }
+    //
+    // setTimeout(function() {
+    //     counter3();
+    // }, 7000);
+    //
+    // setTimeout(function() {
+    //     const interval = setInterval(counter3, 10000);
+    // }, 7000);
+    // function counter3 () {
+    //     $({counter: 0}).animate({counter: 2}, {
+    //         duration: 1000,
+    //         easing: 'linear',
+    //         step: function () {
+    //             $('.counter3').text(Math.ceil(this.counter))
+    //         },
+    //         complete: function () {
+    //         }
+    //     });
+    // }
 
 
 
