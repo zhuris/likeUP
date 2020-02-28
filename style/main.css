@@ -11,6 +11,7 @@ a:hover {
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
+  outline: none;
 }
 
 button,
@@ -148,6 +149,20 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
+.wrapper .menu-mob__links-item.active-mob-links {
+  color: #fb9a50;
+  position: relative;
+}
+.wrapper .menu-mob__links-item.active-mob-links:after {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: #fb9a50;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .wrapper .menu-mob__links-social {
   display: flex;
   justify-content: center;
@@ -238,7 +253,7 @@ body {
 .wrapper .menu-mob.menu-mob_state_open .menu-mob__links {
   display: flex;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .wrapper .menu-mob {
     display: flex;
   }
@@ -507,10 +522,10 @@ body {
   position: fixed;
   justify-content: center;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-50%);
   left: 50%;
   width: 485px;
-  margin-left: -200px;
+  /* margin-left: -200px; */
   background: #fff;
   border: 1px solid orange;
   border-radius: 4px;
@@ -1084,6 +1099,7 @@ body {
   line-height: 26px;
   letter-spacing: 0.4px;
   color: #11306d;
+  text-align: center;
 }
 .wrapper .my-creators-wrapper .main-slider .main-slide .creator__info .creator-position {
   margin-bottom: 15px;
@@ -1376,6 +1392,8 @@ body {
     height: 100%;
     left: 0;
     margin: 0;
+    border: none;
+    border-radius: 0;
   }
   .wrapper .investments-wrapper .modals-form {
     align-items: center;
@@ -1449,7 +1467,8 @@ body {
     letter-spacing: 0.35px;
     color: #ffffff;
     color: #11306d;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way__point {
     isplay: flex;
@@ -1467,16 +1486,16 @@ body {
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way__road-wrapper {
     position: absolute;
-    width: 100vh;
+    width: 615px;
     height: 2px;
     background: #11306d;
     z-index: -1;
     overflow: hidden;
     transform: rotate(90deg) translateX(-50%);
-    bottom: -35%;
+    bottom: 0;
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way__road-container {
-    width: 180vw;
+    width: 615px;
     height: 4px;
     background: #fb9a50;
     position: absolute;
@@ -1728,6 +1747,7 @@ body {
     font-weight: 500;
     line-height: 17px;
     letter-spacing: 0.3px;
+    margin-bottom: 3rem;
   }
   .wrapper .my-team-wrapper .my-team__container .my-team__content button {
     font-size: 12px;
@@ -2124,8 +2144,8 @@ body {
     width: 100%;
     height: 100vh;
     background: #fff;
-    border: 1px solid orange;
-    border-radius: 4px;
+    border: none;
+    border-radius: 0;
     z-index: 99999;
     opacity: 1;
     left: 0;
@@ -2235,7 +2255,7 @@ body {
     margin-bottom: 4rem;
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way__point {
-    isplay: flex;
+    display: flex;
     align-items: center;
     height: 570px;
     flex-direction: column;
@@ -2250,16 +2270,14 @@ body {
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way__road-wrapper {
     position: absolute;
-    width: 100vh;
     height: 2px;
     background: #11306d;
     z-index: -1;
     overflow: hidden;
     transform: rotate(90deg) translateX(-50%);
-    bottom: -35%;
+    bottom: 0;
   }
   .wrapper .investments-wrapper .my-way-wrapper .my-way__road-container {
-    width: 180vw;
     height: 4px;
     background: #fb9a50;
     position: absolute;
@@ -2318,16 +2336,16 @@ body {
     width: 140px;
   }
   .wrapper .investments-wrapper .my-way-wrapper .point .title-1 {
-    animation: point-sub-1 5s ease both;
+    animation: point-sub-1 5s ease infinite;
   }
   .wrapper .investments-wrapper .my-way-wrapper .point .title-2 {
-    animation: point-sub-2 5s ease both;
+    animation: point-sub-2 5s ease infinite;
   }
   .wrapper .investments-wrapper .my-way-wrapper .point .title-3 {
-    animation: point-sub-3 5s ease both;
+    animation: point-sub-3 5s ease infinite;
   }
   .wrapper .investments-wrapper .my-way-wrapper .point .title-4 {
-    animation: point-sub-4 5s ease both;
+    animation: point-sub-4 5s ease infinite;
   }
   .wrapper .investments-wrapper .my-way-wrapper .q1 .point__circle {
     animation: point-q1 5s ease infinite;
@@ -2394,6 +2412,9 @@ body {
   }
   .wrapper .my-creators-wrapper .main-slider {
     max-width: 400px;
+  }
+  .wrapper .my-creators-wrapper .main-slider .main-slide {
+    outline: none !important;
   }
   .wrapper .my-creators-wrapper .main-slider .main-slide .creator {
     width: 165px;
@@ -2861,6 +2882,7 @@ body {
 
   .wrapper .why-me-wrapper {
     border-radius: 0 0 250px;
+    padding: 30px 0 65px 0;
   }
 
   .wrapper .investments-wrapper .my-way-wrapper {

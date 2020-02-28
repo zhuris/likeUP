@@ -158,6 +158,20 @@ body {
     text-transform: uppercase;
     cursor: pointer;
   }
+  .menu-mob__links-item.active-mob-links{
+    color: #fb9a50;
+    position: relative;
+    &:after{
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: #fb9a50;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
   .menu-mob__links-social{
     display: flex;
     justify-content: center;
@@ -262,7 +276,7 @@ body {
 
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
     .menu-mob{
       display: flex;
     }
@@ -571,10 +585,10 @@ body {
       position: fixed;
       justify-content: center;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-50%) translateX(-50%);
       left: 50%;
       width: 485px;
-      margin-left: -200px;
+      /* margin-left: -200px; */
       background: #fff;
       border: 1px solid orange;
       border-radius: 4px;
@@ -1190,6 +1204,7 @@ animation: point-sub-4 10s ease infinite ;
             p {
               @include p-desktop();
               color: #11306d;
+              text-align: center;
             }
 
             .creator-position {
@@ -1531,6 +1546,8 @@ animation: point-sub-4 10s ease infinite ;
       height: 100%;
       left: 0;
       margin: 0;
+      border: none;
+      border-radius: 0;
     }
     .modals-form {
       align-items: center;
@@ -1603,7 +1620,8 @@ animation: point-sub-4 10s ease infinite ;
     h2 {
       @include h2-mobile();
       color: #11306d;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
+      margin-top: 3rem;
     }
    .my-way__point{
      isplay: flex;
@@ -1620,16 +1638,16 @@ animation: point-sub-4 10s ease infinite ;
       justify-content: center;
       &__road-wrapper{
         position: absolute;
-        width: 100vh;
+        width: 615px;
         height: 2px;
         background: #11306d;
         z-index: -1;
         overflow: hidden;
         transform: rotate(90deg) translateX(-50%);
-        bottom: -35%;
+        bottom: 0;
       }
       &__road-container{
-        width: 180vw;
+        width: 615px;
         height: 4px;
         background: #fb9a50;
         position: absolute;
@@ -1881,6 +1899,7 @@ animation: point-sub-4 10s ease infinite ;
         }
         p {
           @include p-mobile();
+          margin-bottom: 3rem;
         }
         button{
 
@@ -2295,13 +2314,14 @@ animation: point-sub-4 10s ease infinite ;
       width: 100%;
       height: 100vh;
       background: #fff;
-      border: 1px solid orange;
-      border-radius: 4px;
+      border: none;
+      border-radius: 0;
       z-index: 99999;
       opacity: 1;
       left: 0;
       margin: 0;
       padding: 90px 30px 45px 30px;
+
     }
 
     .popup-close {
@@ -2430,7 +2450,7 @@ animation: point-sub-4 10s ease infinite ;
       margin-bottom: 4rem;
     }
     .my-way__point{
-      isplay: flex;
+      display: flex;
       align-items: center;
       height: 570px;
       flex-direction: column;
@@ -2444,16 +2464,16 @@ animation: point-sub-4 10s ease infinite ;
       justify-content: center;
       &__road-wrapper{
         position: absolute;
-        width: 100vh;
+        //width: 100vh;
         height: 2px;
         background: #11306d;
         z-index: -1;
         overflow: hidden;
         transform: rotate(90deg) translateX(-50%);
-        bottom: -35%;
+        bottom: 0;
       }
       &__road-container{
-        width: 180vw;
+        //width: 180vw;
         height: 4px;
         background: #fb9a50;
         position: absolute;
@@ -2515,16 +2535,16 @@ animation: point-sub-4 10s ease infinite ;
         width: 140px;
       }
       .title-1{
-        animation: point-sub-1 5s ease both;
+        animation: point-sub-1 5s ease infinite;
       }
       .title-2{
-        animation: point-sub-2 5s ease both;
+        animation: point-sub-2 5s ease infinite;
       }
       .title-3{
-        animation: point-sub-3 5s ease both;
+        animation: point-sub-3 5s ease infinite;
       }
       .title-4{
-        animation: point-sub-4 5s ease both ;
+        animation: point-sub-4 5s ease infinite ;
       }
 
     }
@@ -2600,6 +2620,7 @@ animation: point-sub-4 10s ease infinite ;
     .main-slider {
       max-width: 400px;
       .main-slide {
+        outline: none !important;
         .creator {
           width: 165px;
           height: 245px;
@@ -3086,6 +3107,7 @@ animation: point-sub-4 10s ease infinite ;
 
   .wrapper .why-me-wrapper{
     border-radius: 0 0 250px;
+    padding: 30px 0 65px 0;
   }
   .wrapper .investments-wrapper .my-way-wrapper{
     border-radius: 250px 0 0 ;
