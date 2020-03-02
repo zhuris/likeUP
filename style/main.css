@@ -215,6 +215,7 @@ body {
   padding: 2px 10px 2px 5px;
   width: auto;
   margin: 0 auto;
+  outline: none;
 }
 .wrapper .menu-mob .menu-mob__links .header__lang {
   position: absolute;
@@ -549,11 +550,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 5rem;
 }
 .wrapper .investments-wrapper .modals-form input {
   height: 30px;
   border-bottom: 1px solid #fb9a50;
-  width: 304px;
+  width: 100%;
   margin-bottom: 28px;
   color: #11306d;
 }
@@ -565,7 +567,7 @@ body {
   border: none;
   border-bottom: 1px solid #fb9a50;
   resize: none;
-  width: 304px;
+  width: 100%;
   height: 30px;
   color: #11306d;
   font-size: 16px;
@@ -732,7 +734,7 @@ body {
   text-align: center;
   width: 190px;
   transform: translateX(-50%);
-  text-transform: capitalize;
+  text-transform: initial;
 }
 .wrapper .investments-wrapper .my-way-wrapper .point .title-1 {
   animation: point-sub-1 10s ease infinite;
@@ -1339,7 +1341,7 @@ body {
   }
 
   .wrapper .header-wrapper .header-content {
-    padding: 3rem 0 0;
+    padding: 3rem 1rem 0 1rem;
   }
 
   .wrapper .header-wrapper .header-content .header-content__title {
@@ -1407,8 +1409,8 @@ body {
   }
 
   .wrapper .investments-wrapper .popup {
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
     margin: 0;
     border: none;
     border-radius: 0;
@@ -1421,6 +1423,7 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    padding: 0 2rem;
   }
   .wrapper .investments-wrapper .modals-form input::placeholder {
     font-size: 12px;
@@ -1929,7 +1932,7 @@ body {
   .wrapper footer.footer .container .contacts .address {
     position: relative;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .wrapper footer.footer .container .contacts .address h3 {
     font-size: 12px;
@@ -1947,7 +1950,7 @@ body {
     height: 28px;
     position: absolute;
     background-color: #fb9a50;
-    top: 5.6rem;
+    top: 105%;
     right: 50%;
     transform: rotate(90deg);
   }
@@ -1971,7 +1974,7 @@ body {
     height: 28px;
     position: absolute;
     background-color: #fb9a50;
-    top: 5.6rem;
+    top: 105%;
     right: 50%;
     transform: rotate(90deg);
   }
@@ -2065,7 +2068,7 @@ body {
   }
 
   .wrapper .header-wrapper .header-content {
-    padding: 3rem 0 0;
+    padding: 3rem 1rem 0 1rem;
   }
 
   .wrapper .header-wrapper .header-content .header-content__title {
@@ -2332,7 +2335,7 @@ body {
   .wrapper .investments-wrapper .my-way-wrapper .point .point__subtitle {
     text-align: center;
     position: absolute;
-    right: -7.5rem;
+    right: -9rem;
     color: #11306d;
     font-size: 10px;
     width: 110px;
@@ -2772,7 +2775,7 @@ body {
   .wrapper footer.footer .container .contacts .address {
     position: relative;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
   .wrapper footer.footer .container .contacts .address h3 {
     font-size: 16px;
@@ -2790,7 +2793,7 @@ body {
     height: 28px;
     position: absolute;
     background-color: #fb9a50;
-    top: 5.6rem;
+    top: 105%;
     right: 50%;
     transform: rotate(90deg);
   }
@@ -2814,7 +2817,7 @@ body {
     height: 28px;
     position: absolute;
     background-color: #fb9a50;
-    top: 5.6rem;
+    top: 105%;
     right: 50%;
     transform: rotate(90deg);
   }

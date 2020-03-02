@@ -169,7 +169,7 @@ $(document).ready(function(){
     $('.menu-mob__links-item, .list-group-item').click(function(){
         divId = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(divId).offset().top - 60
+            scrollTop: $(divId).offset().top - 50
         }, 100);
     });
 
