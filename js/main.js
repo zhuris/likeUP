@@ -68,9 +68,9 @@ $(document).ready(function(){
                 }
             },
             {
-                breakpoint: 768,
+                breakpoint: 769,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                     infinite: true,
                     dots: false
@@ -92,21 +92,29 @@ $(document).ready(function(){
     //show, hide modal
 
     $('.popup-open').click(function() {
-        $('.popup-fade').fadeIn();
+        $('.popup-fade').fadeIn(100);
         $('.scroll-wrapper').css({"overflow" : "hidden"});
         return false;
     });
 
     $('.popup-close').click(function() {
-        $(this).parents('.popup-fade').fadeOut();
+        $(this).parents('.popup-fade').fadeOut(100);
         $('.scroll-wrapper').css({'overflow' : 'auto'});
         return false;
     });
 
     $('.modals-form__confirm').click(function() {
-        $('.popup-fade').fadeOut();
+        $('.popup-fade').fadeOut(100);
         $('.scroll-wrapper').css({'overflow' : 'auto'});
         return false;
+    });
+
+    document.addEventListener('keydown', function(event) {
+        const key = event.key; // const {key} = event; in ES6+
+        if (key === "Escape") {
+            $('.popup-fade').fadeOut(100);
+            $('.scroll-wrapper').css({'overflow' : 'auto'});
+        }
     });
 
     //menu

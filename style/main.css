@@ -68,13 +68,14 @@ body {
   color: white;
   background: none;
   border: none;
-  padding: 0.45rem;
+  padding: 0;
   position: relative;
   right: -45px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 .wrapper .list-group .list-group-item:after {
   content: "";
@@ -350,6 +351,7 @@ body {
   border-radius: 7px;
   border: 1px solid #fb9a50;
   outline: none;
+  text-transform: uppercase;
 }
 .wrapper .header-wrapper .header .header__btn a:hover {
   transition: 0.3s ease;
@@ -448,11 +450,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.75px;
   color: #11306d;
-  margin: 1rem 0;
+  margin: 1rem 0 3rem;
 }
 .wrapper .why-me-wrapper .content__img {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 .wrapper .why-me-wrapper .content__img .slider-phone__border {
   position: absolute;
@@ -559,6 +560,20 @@ body {
 .wrapper .investments-wrapper .modals-form input::placeholder {
   color: #fb9a50;
   font-size: 12px;
+}
+.wrapper .investments-wrapper .modals-form textarea {
+  border: none;
+  border-bottom: 1px solid #fb9a50;
+  resize: none;
+  width: 304px;
+  height: 30px;
+  color: #11306d;
+  font-size: 16px;
+  line-height: 21px;
+}
+.wrapper .investments-wrapper .modals-form textarea::placeholder {
+  color: #fb9a50;
+  font-size: 14px;
 }
 .wrapper .investments-wrapper .modals-form input.modals-form__confirm {
   border-radius: 7px;
@@ -704,7 +719,7 @@ body {
   position: absolute;
   top: 5rem;
   color: #11306d;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
 }
 .wrapper .investments-wrapper .my-way-wrapper .point .point__title {
@@ -717,6 +732,7 @@ body {
   text-align: center;
   width: 190px;
   transform: translateX(-50%);
+  text-transform: capitalize;
 }
 .wrapper .investments-wrapper .my-way-wrapper .point .title-1 {
   animation: point-sub-1 10s ease infinite;
@@ -897,7 +913,7 @@ body {
 .wrapper .my-team-wrapper .my-team__container .my-team__image .my-team__image-circle-1 .percent-1 svg {
   position: absolute;
   top: -22px;
-  right: 0px;
+  right: -3px;
   z-index: 0;
   width: 85px;
   height: 150px;
@@ -1031,6 +1047,9 @@ body {
   max-width: 1600px;
   margin: 0 auto;
 }
+.wrapper .my-creators-wrapper .main-slider .main-slide {
+  padding: 10px 0;
+}
 .wrapper .my-creators-wrapper .main-slider .main-slide .creator {
   width: 280px;
   height: 420px;
@@ -1040,6 +1059,7 @@ body {
   position: relative;
   margin: 10px;
   overflow: hidden;
+  margin: 0 auto;
 }
 .wrapper .my-creators-wrapper .main-slider .main-slide .creator .creator__image {
   height: 335px;
@@ -1142,10 +1162,9 @@ body {
   letter-spacing: 0.75px;
   margin-bottom: 30px;
 }
-.wrapper .partners-wrapper .content .row {
+.wrapper .partners-wrapper .content .rows {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .wrapper .partners-wrapper .content .partner {
   height: 160px;
@@ -1164,7 +1183,7 @@ body {
   width: 100%;
 }
 .wrapper footer.footer {
-  padding: 60px 0 60px 0;
+  padding: 60px 0 65px 0;
 }
 .wrapper footer.footer .container {
   display: flex;
@@ -1390,7 +1409,6 @@ body {
   .wrapper .investments-wrapper .popup {
     width: 100%;
     height: 100%;
-    left: 0;
     margin: 0;
     border: none;
     border-radius: 0;
@@ -1403,9 +1421,6 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-  }
-  .wrapper .investments-wrapper .modals-form input {
-    width: auto;
   }
   .wrapper .investments-wrapper .modals-form input::placeholder {
     font-size: 12px;
@@ -1680,7 +1695,7 @@ body {
     margin-bottom: 0px;
   }
   .wrapper .my-creators-wrapper .main-slider .main-slide .creator__info .creator-info {
-    height: 150px;
+    height: 140px;
   }
   .wrapper .my-creators-wrapper .main-slider .main-slide .creator__info .creator-info p {
     font-size: 12px;
@@ -1696,10 +1711,13 @@ body {
 
   .wrapper .partners-wrapper .container .content {
     display: flex;
+    justify-content: space-around;
   }
 
-  .wrapper .partners-wrapper .content .row {
-    justify-content: center;
+  .wrapper .partners-wrapper .content .rows {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
 
   .wrapper .partners-wrapper {
@@ -2141,14 +2159,11 @@ body {
   .wrapper .investments-wrapper .popup {
     position: fixed;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
     background: #fff;
     border: none;
     border-radius: 0;
     z-index: 99999;
     opacity: 1;
-    left: 0;
     margin: 0;
     padding: 90px 30px 45px 30px;
   }
@@ -2171,7 +2186,6 @@ body {
   .wrapper .investments-wrapper .modals-form input {
     height: 30px;
     border-bottom: 1px solid #fb9a50;
-    width: auto;
     margin-bottom: 28px;
     color: #11306d;
   }
@@ -2411,7 +2425,7 @@ body {
     height: 12px;
   }
   .wrapper .my-creators-wrapper .main-slider {
-    max-width: 400px;
+    max-width: 550px;
   }
   .wrapper .my-creators-wrapper .main-slider .main-slide {
     outline: none !important;
@@ -2467,7 +2481,7 @@ body {
     margin-bottom: 0px;
   }
   .wrapper .my-creators-wrapper .main-slider .main-slide .creator__info .creator-info {
-    height: 150px;
+    height: 140px;
   }
   .wrapper .my-creators-wrapper .main-slider .main-slide .creator__info .creator-info p {
     color: #ffffff;
@@ -2484,10 +2498,13 @@ body {
 
   .wrapper .partners-wrapper .container .content {
     display: flex;
+    justify-content: space-around;
   }
 
-  .wrapper .partners-wrapper .content .row {
-    justify-content: center;
+  .wrapper .partners-wrapper .content .rows {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
 
   .wrapper .partners-wrapper {
@@ -2868,7 +2885,16 @@ body {
   }
 
   .wrapper .my-way-wrapper h2 {
-    margin-left: 5rem;
+    margin-left: 7rem;
+  }
+
+  .wrapper .investments-wrapper .my-way-wrapper .my-way__point {
+    max-width: 85%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper .why-me-wrapper .content__img {
+    display: none;
   }
 }
 @media screen and (min-width: 1025px) and (max-width: 1367px) {
@@ -2876,8 +2902,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+    width: 75%;
+    margin-left: 5rem;
   }
 
   .wrapper .why-me-wrapper {
@@ -2917,6 +2943,10 @@ body {
   .wrapper .partners-wrapper .content {
     max-width: 90%;
     padding: 0 15px;
+  }
+
+  .wrapper .my-creators-wrapper .main-slider {
+    max-width: 1200px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {

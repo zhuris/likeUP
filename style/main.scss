@@ -57,13 +57,14 @@ body {
       color: white;
       background: none;
       border: none;
-      padding: .45rem;
+      padding: 0;
       position: relative;
       right: -45px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       text-transform: uppercase;
+      margin-bottom: 1rem;
 
       &:after {
         content: "";
@@ -394,6 +395,7 @@ body {
           border-radius: 7px;
           border: 1px solid #fb9a50;
           outline: none;
+          text-transform: uppercase;
 
           &:hover {
             transition: .3s ease;
@@ -505,13 +507,12 @@ body {
     h2 {
      @include h2-desktop();
       color: #11306d;
-      margin: 1rem 0;
+      margin: 1rem 0 3rem;
     }
 
     .content {
       &__img {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        padding-bottom: 3rem;
         .slider-phone__border{
           position: absolute;
           width: 285px;
@@ -626,6 +627,21 @@ body {
           color: #fb9a50;
           font-size: 12px;
         }
+      }
+      textarea{
+        border: none;
+        border-bottom: 1px solid #fb9a50;
+        resize: none;
+        width: 304px;
+        height: 30px;
+        color: #11306d;
+        font-size: 16px;
+        line-height: 21px;
+        &::placeholder {
+          color: #fb9a50;
+          font-size: 14px;
+        }
+
       }
 
       input.modals-form__confirm {
@@ -792,7 +808,7 @@ body {
           position: absolute;
           top: 5rem;
           color: #11306d;
-          font-size: 16px;
+          font-size: 14px;
           text-transform: uppercase;
         }
         .point__title{
@@ -805,6 +821,7 @@ body {
           text-align: center;
           width: 190px;
           transform: translateX(-50%);
+          text-transform: capitalize;
         }
         .title-1{
           animation: point-sub-1 10s ease infinite;
@@ -991,7 +1008,7 @@ animation: point-sub-4 10s ease infinite ;
             svg {
               position: absolute;
               top: -22px;
-              right: 0px;
+              right: -3px;
               z-index: 0;
               width: 85px;
               height: 150px;
@@ -1131,6 +1148,7 @@ animation: point-sub-4 10s ease infinite ;
       margin: 0 auto;
 
       .main-slide {
+        padding: 10px 0;
         .creator {
           width: 280px;
           height: 420px;
@@ -1140,6 +1158,7 @@ animation: point-sub-4 10s ease infinite ;
           position: relative;
           margin: 10px;
           overflow: hidden;
+          margin: 0 auto;
 
           .creator__image {
             height: 335px;
@@ -1261,10 +1280,9 @@ animation: point-sub-4 10s ease infinite ;
     }
 
     .content {
-      .row {
+      .rows {
         display: flex;
         justify-content: space-between;
-        align-items: center;
       }
 
       .partner {
@@ -1289,7 +1307,7 @@ animation: point-sub-4 10s ease infinite ;
   }
 
   footer.footer {
-    padding: 60px 0 60px 0;
+    padding: 60px 0 65px 0;
 
     .container {
       display: flex;
@@ -1544,7 +1562,7 @@ animation: point-sub-4 10s ease infinite ;
     .popup {
       width: 100%;
       height: 100%;
-      left: 0;
+      //left: 0;
       margin: 0;
       border: none;
       border-radius: 0;
@@ -1558,7 +1576,7 @@ animation: point-sub-4 10s ease infinite ;
       top: 50%;
       transform: translateY(-50%);
       input {
-        width: auto;
+        //width: auto;
         &::placeholder {
           font-size: 12px;
         }
@@ -1842,7 +1860,7 @@ animation: point-sub-4 10s ease infinite ;
               margin-bottom: 0px;
             }
             .creator-info {
-              height: 150px;
+              height: 140px;
               p{
                 @include p-mobile();
                 color: #11306d;
@@ -1863,9 +1881,12 @@ animation: point-sub-4 10s ease infinite ;
   //partners container
   .wrapper .partners-wrapper .container .content{
     display: flex;
+    justify-content: space-around;
   }
-  .wrapper .partners-wrapper .content .row{
-    justify-content: center;
+  .wrapper .partners-wrapper .content .rows{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
   .wrapper .partners-wrapper {
     margin-top: -33rem;
@@ -2311,14 +2332,14 @@ animation: point-sub-4 10s ease infinite ;
     .popup {
       position: fixed;
       justify-content: center;
-      width: 100%;
-      height: 100vh;
+      //width: 100%;
+      //height: 100vh;
       background: #fff;
       border: none;
       border-radius: 0;
       z-index: 99999;
       opacity: 1;
-      left: 0;
+      //left: 0;
       margin: 0;
       padding: 90px 30px 45px 30px;
 
@@ -2345,7 +2366,7 @@ animation: point-sub-4 10s ease infinite ;
       input {
         height: 30px;
         border-bottom: 1px solid #fb9a50;
-        width: auto;
+        //width: auto;
         margin-bottom: 28px;
         color: #11306d;
 
@@ -2618,7 +2639,7 @@ animation: point-sub-4 10s ease infinite ;
       }
     }
     .main-slider {
-      max-width: 400px;
+      max-width: 550px;
       .main-slide {
         outline: none !important;
         .creator {
@@ -2669,7 +2690,7 @@ animation: point-sub-4 10s ease infinite ;
               margin-bottom: 0px;
             }
             .creator-info {
-              height: 150px;
+              height: 140px;
               p{
                 @include p-desktop();
                 color: #11306d;
@@ -2690,9 +2711,12 @@ animation: point-sub-4 10s ease infinite ;
   //partners container
   .wrapper .partners-wrapper .container .content{
     display: flex;
+    justify-content: space-around;
   }
-  .wrapper .partners-wrapper .content .row{
-    justify-content: center;
+  .wrapper .partners-wrapper .content .rows{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
   }
   .wrapper .partners-wrapper {
     margin-top: -33rem;
@@ -3092,8 +3116,17 @@ animation: point-sub-4 10s ease infinite ;
   }
 
   .wrapper .my-way-wrapper h2{
-    margin-left: 5rem;
+    margin-left: 7rem;
   }
+  .wrapper .investments-wrapper .my-way-wrapper .my-way__point{
+    max-width: 85%;
+  }
+}
+@media screen and (max-width: 1024px){
+  .wrapper .why-me-wrapper .content__img{
+    display: none;
+  }
+
 }
 @media screen and  (min-width: 1025px)  and (max-width: 1367px) {
 
@@ -3101,8 +3134,8 @@ animation: point-sub-4 10s ease infinite ;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+    width: 75%;
+    margin-left: 5rem;
   }
 
   .wrapper .why-me-wrapper{
@@ -3141,6 +3174,9 @@ animation: point-sub-4 10s ease infinite ;
   .wrapper .partners-wrapper .content{
     max-width: 90%;
     padding: 0 15px;
+  }
+  .wrapper .my-creators-wrapper .main-slider{
+    max-width: 1200px;
   }
 }
 @media screen and  (min-width: 769px)  and (max-width: 1024px){
