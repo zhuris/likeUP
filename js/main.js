@@ -98,13 +98,13 @@ $(document).ready(function(){
     });
 
     $('.popup-close').click(function() {
-        $(this).parents('.popup-fade').fadeOut(100);
+        $(this).parents('.popup-fade').fadeOut(0);
         $('.scroll-wrapper').css({'overflow' : 'auto'});
         return false;
     });
 
     $('.modals-form__confirm').click(function() {
-        $('.popup-fade').fadeOut(100);
+        $('.popup-fade').fadeOut(0);
         $('.scroll-wrapper').css({'overflow' : 'auto'});
         return false;
     });
@@ -112,7 +112,7 @@ $(document).ready(function(){
     document.addEventListener('keydown', function(event) {
         const key = event.key; // const {key} = event; in ES6+
         if (key === "Escape") {
-            $('.popup-fade').fadeOut(100);
+            $('.popup-fade').fadeOut(0);
             $('.scroll-wrapper').css({'overflow' : 'auto'});
         }
     });
@@ -173,70 +173,24 @@ $(document).ready(function(){
         }, 100);
     });
 
-    //increment animations
-
-    // setTimeout(function() {
-    //     counter1();
-    // }, 1000);
-    //
-    // setTimeout(function() {
-    //     const interval = setInterval(counter1, 10000);
-    // }, 1000);
-    // function counter1 () {
-    //     $({counter: 0}).animate({counter: 7}, {
-    //         duration: 1000,
-    //         easing: 'linear',
-    //         step: function () {
-    //             $('.counter1').text(Math.ceil(this.counter))
-    //         },
-    //         complete: function () {
-    //         }
-    //     });
-    // }
-    //
-    // setTimeout(function() {
-    //     counter2();
-    // }, 4000);
-    //
-    // setTimeout(function() {
-    //     const interval = setInterval(counter2, 10000);
-    // }, 4000);
-    // function counter2 () {
-    //     $({counter: 0}).animate({counter: 4}, {
-    //         duration: 1000,
-    //         easing: 'linear',
-    //         step: function () {
-    //             $('.counter2').text(Math.ceil(this.counter))
-    //         },
-    //         complete: function () {
-    //         }
-    //     });
-    // }
-    //
-    // setTimeout(function() {
-    //     counter3();
-    // }, 7000);
-    //
-    // setTimeout(function() {
-    //     const interval = setInterval(counter3, 10000);
-    // }, 7000);
-    // function counter3 () {
-    //     $({counter: 0}).animate({counter: 2}, {
-    //         duration: 1000,
-    //         easing: 'linear',
-    //         step: function () {
-    //             $('.counter3').text(Math.ceil(this.counter))
-    //         },
-    //         complete: function () {
-    //         }
-    //     });
-    // }
-
 
     $( ".menu-mob__links-item" ).focus(function() {
         $(".menu-mob__links-item").removeClass("active-mob-links");
         $(this).addClass("active-mob-links");
     });
+
+
+    function getWindowWidth() {
+        return window.innerWidth || document.body.clientWidth;
+    }
+
+    if (getWindowWidth() <= 567) {
+        window.onload = function(){
+            $('.creator').on('click',function () {
+
+            })
+        }
+    }
 
 
 
